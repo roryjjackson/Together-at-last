@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_05_160606) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_05_161023) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -64,6 +64,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_160606) do
     t.index ["wedding_id"], name: "index_vips_on_wedding_id"
   end
 
+  create_table "wedding_guests", force: :cascade do |t|
+    t.bigint "wedding_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_wedding_guests_on_user_id"
+    t.index ["wedding_id"], name: "index_wedding_guests_on_wedding_id"
+  end
+
   create_table "weddings", force: :cascade do |t|
     t.text "info"
     t.date "date"
@@ -78,5 +87,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_160606) do
   add_foreign_key "registries", "users"
   add_foreign_key "schedules", "weddings"
   add_foreign_key "vips", "weddings"
+  add_foreign_key "wedding_guests", "users"
+  add_foreign_key "wedding_guests", "weddings"
   add_foreign_key "weddings", "users"
 end
