@@ -1,0 +1,29 @@
+<div class="searchbar" style="width: 50vw; padding-left: 43px; padding-right: 43px;">
+  <h3>Search for Wedding</h3>
+    <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a wedding"
+    %>
+    <div class="button"><%= submit_tag "Search", class: "btn btn-primary" %></div>
+   <% end %>
+  </div>
+  <div class="main-container">
+    <div class="cards">
+      <%@weddings.each do |wedding| %>
+        <%= link_to pages_path(wedding.id), class:"text-decoration-none" do %>
+          <%# <div class="card">
+            <div class="card-photo"><%= cl_image_tag wedding.photo.key, width: 100, crop: :fill %>
+            <%# </div> %>
+            <h1 class="text-black mt-4"> <%= wedding.info %></h1>
+            <p class="list-group-item text-black"><%= wedding.date %></p>
+            <p class="list-group-item text-black"><%= wedding.page_heading %></p>
+      </div>
+        <% end %>
+      <% end %>
+  </div>
+
+ <div>
+    <%= link_to "Add your new wedding", new_wedding_path, class: "btn btn-primary" %>
+</div>
