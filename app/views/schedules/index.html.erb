@@ -1,0 +1,16 @@
+<h1>Schedule of the day</h1>
+
+<% @schedules.each do |schedule| %>
+    <p><%= schedule.time.strftime("%I:%M%p") %></p>
+    <p><%= schedule.description %></p>
+    <div class = 'card-container' display-flex>
+    <%# img %>
+    <div>
+    <h3>ceremony</h3>
+    <p>After our quick dress-less rehearsal, we'll meet you over here at the Crosby Street Hotel bar. We've spent countless summer evenings here drinking in the cocktails and decor. Last moonrise as Hadley & Muller, help us howl!</p>
+    <p>ADDRESS:
+79 Crosby St New York, NY</p>
+    </div>
+    </div>
+
+<% end %>
