@@ -19,12 +19,12 @@ class RsvpsController < ApplicationController
     @rsvp.wedding_id = @wedding.id
     @rsvp.wedding_guests_id = current_user.id
     @rsvp.save
-    # if @rsvp.save
+    if @rsvp.save
       redirect_to root_path(@rsvp)
       raise
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   # def edit
