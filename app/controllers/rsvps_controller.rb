@@ -9,22 +9,27 @@ class RsvpsController < ApplicationController
   end
 
   def new
+    @wedding = Wedding.find(params[:wedding_id])
     @rsvp = Rsvp.new
+
   end
 
   def create
     @rsvp = Rsvp.new(rsvp_params)
-    # raise
     @wedding = Wedding.find(params[:wedding_id])
     @rsvp.wedding_id = @wedding.id
     @rsvp.wedding_guests_id = current_user.id
-    @rsvp.save
-    if @rsvp.save
-      redirect_to root_path(@rsvp)
-      raise
-    else
-      render :new, status: :unprocessable_entity
-    end
+
+@rsvp.save
+raise
+
+#     if @rsvp.save
+# raise
+#       redirect_to rsvps_path
+
+#     else
+#       render :new, status: :unprocessable_entity
+#     end
   end
 
   # def edit
