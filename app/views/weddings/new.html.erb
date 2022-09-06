@@ -1,0 +1,10 @@
+<h1>Add a new wedding</h1>
+<div class="form" style="width: 50vw; margin-left: 100px">
+  <%= simple_form_for(@wedding) do |f| %>
+    <%= f.input :info %>
+    <%= f.input :date %>
+    <%= f.input :page_heading %>
+
+    <%= f.submit "Add your new wedding", class: "btn btn-primary" %>
+  <% end %>
+</div>
