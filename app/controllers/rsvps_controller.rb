@@ -15,6 +15,8 @@ class RsvpsController < ApplicationController
   def create
     @rsvp = Rsvp.new(rsvp_params)
     # raise
+    @wedding = Wedding.find(params[:wedding_id])
+    @rsvp.wedding_id = @wedding.id
     @rsvp.wedding_guests_id = current_user.id
     @rsvp.save
     # if @rsvp.save
