@@ -1,10 +1,26 @@
-<h1>Schedule of the day</h1>
+<div class="container" style="width:960px !important">
+  <div class="sixteen columns section-title">
+    <hr/>
+    <h1>Schedule</h1>
+  </div>
+  <div class="fifteen columns outer-content" style="width:940px">
+    <div class="content" id="schedule-slider" style="height:275px">
+      <ul class="slides" style="height:275px">
 
-<% @schedules.each do |schedule| %>
-    <p><%= schedule.time.strftime("%I:%M%p") %></p>
-    <p><%= schedule.description %></p>
-    <div class = 'card-container' display-flex>
-    <%# img %>
+       <li id="sched-slide-0" style="height:275px">
+            <div class="picture" style="margin: 0;width:160px;float:left">
+            </div>
+
+<div class="card-trip">
+  <img src="https://cdn.rileygrey.com/77130/1c528a4e-7105-4f6f-855d-aeecdf0869c0.jpg" />
+  <img src="https://cdn.rileygrey.com/77130/a05a77cd-514b-42b8-8d6f-ad2a3717aa95.jpg" />
+  <img src="https://cdn.rileygrey.com/77130/97b6b784-5182-45f7-934e-3cab7475f7cd.jpg" />
+    
+
+  <div class="card-trip-infos">
+    </div>
+    </div>
+
     <div>
     <h3>ceremony</h3>
     <p>After our quick dress-less rehearsal, we'll meet you over here at the Crosby Street Hotel bar. We've spent countless summer evenings here drinking in the cocktails and decor. Last moonrise as Hadley & Muller, help us howl!</p>
@@ -13,4 +29,8 @@
     </div>
     </div>
 
+<% @schedules.each do |schedule| %>
+    <p><%= schedule.time.strftime("%I:%M%p") %></p>
+    <p><%= schedule.description %></p>
+    <div class = 'card-container' display-flex>
 <% end %>
