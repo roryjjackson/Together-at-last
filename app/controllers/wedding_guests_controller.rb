@@ -6,11 +6,9 @@ class WeddingGuestsController < ApplicationController
   end
 
   def create
-
     @wedding_guest = WeddingGuest.new(wedding_guest_params)
     @wedding_guest.user = current_user
     if @wedding_guest.save
-
       redirect_to wedding_path(@wedding.id)
     else
       render :new, status: :unprocessable_entity
