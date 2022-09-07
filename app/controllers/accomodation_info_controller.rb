@@ -1,8 +1,7 @@
 class AccomodationInfoController < ApplicationController
 
-    def create 
-        @accomodation_info = Accomodation_infos.new(accomodation_info_params)
-        raise
+    def create
+        @accomodation_info = AccomodationInfo.new(accomodation_info_params)
         @wedding = Wedding.find(params[:wedding_id])
         @accomodation_info.wedding_id = @wedding.id
         @accomodation_info.save
@@ -10,17 +9,18 @@ class AccomodationInfoController < ApplicationController
     end
 
     def new
-        @accomodation_info = Accomodation_info.new
+
+        @accomodation_info = AccomodationInfo.new
 
     end
 
     def index
-        @accomodation_info = Accomodation_info.all
-
+        @accomodation_info = AccomodationInfo.all
     end
 
     def show
-        @accomodation_info = Accomodation_info.find
+
+        @accomodation_info = AccomodationInfo.find(params[:id])
 
     end
 
@@ -28,5 +28,5 @@ class AccomodationInfoController < ApplicationController
 
     def accomodation_info_params
         params.require(:accomodation_info).permit(:url, :title, :description)
-
+    end
 end
