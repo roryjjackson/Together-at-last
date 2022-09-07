@@ -1,0 +1,24 @@
+  <h1>Accomodation</h1>
+  <%# <div class = 'card-container' display-flex></div> %>
+  <div class="card-trip w-100 d-flex ">
+    <img src="https://cdn.rileygrey.com/77130/435a320f-b7b8-40b6-9f41-75508ff8a8ac.jpg" />
+    <img src="https://cdn.rileygrey.com/77130/2834d638-6b56-4613-8fbf-b1152618677e.jpg" />
+    <img src="https://cdn.rileygrey.com/47883/df349c0d-8042-4121-ad88-b4fb524e673b.jpg" />
+  </div>
+  <div class="card-trip-infos">
+
+  <% @accomodation_info.each do |accomodation_info| %>
+      <div class="info">
+        <h2><%= accomodation_info.title %></h2>
+        <h3>description</h3>
+        <p><%= accomodation_info.description %></p>
+        <h3>URL</h3>
+        <p><%= accomodation_info.url %></p>
+         <%= link_to "View", accomodation_info_path(accomodation_info) %>
+      </div>
+  <% end %>
+
+  </div>
+
+      
+    
