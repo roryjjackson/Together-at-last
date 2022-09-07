@@ -5,7 +5,6 @@ class SchedulesController < ApplicationController
   end
 
   def create
-
     @schedule = Schedule.new(schedule_params)
     @wedding = Wedding.find(params[:wedding_id])
     @schedule.wedding_id = @wedding.id

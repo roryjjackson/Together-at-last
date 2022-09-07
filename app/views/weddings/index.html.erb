@@ -12,18 +12,20 @@
   <div class="main-container">
     <div class="cards">
       <%@weddings.each do |wedding| %>
-        <%= link_to wedding_path(wedding), class:"text-decoration-none" do %>
+        <%= link_to wedding_wedding_guests_path(wedding), data: { "turbo-method": :post }, class:"text-decoration-none" do %>
           <%# <div class="card">
             <div class="card-photo"><%= cl_image_tag wedding.photo.key, width: 100, crop: :fill %>
             <%# </div> %>
             <h1 class="text-black mt-4"> <%= wedding.info %></h1>
             <p class="list-group-item text-black"><%= wedding.date %></p>
             <p class="list-group-item text-black"><%= wedding.page_heading %></p>
+
       </div>
         <% end %>
       <% end %>
   </div>
-
  <div>
     <%= link_to "Add your new wedding", new_wedding_path, class: "btn btn-primary" %>
 </div>
+
+
