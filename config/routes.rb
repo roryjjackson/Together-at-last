@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
   resources :schedules, only: %i[index show]
   resources :rsvps, only: %i[index show]
-
+  
   # resources :pages, :weddings, :schedules, :rsvps
   # Defines the root path route ("/")
   # root "articles#index"

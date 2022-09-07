@@ -19,7 +19,7 @@ class WeddingsController < ApplicationController
 
     if @wedding.save
       # raise
-      redirect_to root_path(@wedding)
+      redirect_to wedding_path(@wedding)
     else
       render :new, status: :unprocessable_entity
     end
