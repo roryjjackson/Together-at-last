@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :pages, only: [ :new, :create ]
     resources :schedules, only: [ :new, :create ]
     resources :rsvps, only: [ :new, :create ]
+    resources :accomodation_infos, only: [ :new, :create ]
   end
   resources :schedules, only: [ :index, :show ]
   resources :rsvps, only: [ :index, :show ]

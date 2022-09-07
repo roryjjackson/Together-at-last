@@ -14,10 +14,6 @@ class SchedulesController < ApplicationController
     
     end
 
-    def destroy
-
-    end
-
     def show 
         @schedules = Schedule.find
     end
