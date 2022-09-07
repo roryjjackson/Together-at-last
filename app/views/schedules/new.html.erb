@@ -1,4 +1,4 @@
-<%= simple_form_for(@schedule) do |f| %>
+<%= simple_form_for([@wedding, @schedule]) do |f| %>
 <%= f.input :time %>
 <%= f.input :description %>
 <%= f.submit "add event", class: "btn btn-primary" %>
