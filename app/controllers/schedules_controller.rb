@@ -1,10 +1,11 @@
 class SchedulesController < ApplicationController
   def new
+    @wedding = Wedding.find(params[:wedding_id])
     @schedule = Schedule.new
   end
 
   def create
-    raise
+
     @schedule = Schedule.new(schedule_params)
     @wedding = Wedding.find(params[:wedding_id])
     @schedule.wedding_id = @wedding.id
