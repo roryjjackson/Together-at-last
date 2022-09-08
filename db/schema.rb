@@ -72,12 +72,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_08_100421) do
 
   create_table "rsvps", force: :cascade do |t|
     t.bigint "wedding_id", null: false
+    t.bigint "wedding_guests_id", null: false
     t.text "meal_choice"
     t.text "spotify_song"
     t.string "attendance"
     t.string "attendee"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["wedding_guests_id"], name: "index_rsvps_on_wedding_guests_id"
     t.index ["wedding_id"], name: "index_rsvps_on_wedding_id"
   end
 
@@ -140,6 +142,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_08_100421) do
   add_foreign_key "registries", "users"
   add_foreign_key "registry_items", "registries"
   add_foreign_key "registry_items", "weddings"
+  add_foreign_key "rsvps", "wedding_guests", column: "wedding_guests_id"
   add_foreign_key "rsvps", "weddings"
   add_foreign_key "schedules", "weddings"
   add_foreign_key "vips", "weddings"

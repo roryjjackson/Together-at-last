@@ -9,7 +9,7 @@
   <div class="cards">
     <%@weddings.each do |wedding| %>
       <%= link_to wedding_wedding_guests_path(wedding), data: { "turbo-method": :post }, class:"text-decoration-none" do %>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path wedding.photos.first.key, height: 300, crop: :fill %>')">
+        <%# <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path wedding.photos.first.key, height: 300, crop: :fill %>
           <h1 class="text-black mt-4"> <%= wedding.info %></h1>
           <p class="list-group-item text-black"><%= wedding.date %></p>
           <p class="list-group-item text-black"><%= wedding.page_heading %></p>

@@ -1,36 +1,35 @@
-<div class="container" style="width:960px !important">
-  <div class="sixteen columns section-title">
+    <h1 class="text-center mt-5 mb-5">Schedule</h1>
+<div class="schedule-page">
+  <%# <div class="sixteen columns section-title">
     <hr/>
-    <h1>Schedule</h1>
-  </div>
-  <div class="fifteen columns outer-content" style="width:940px">
+  </div> %>
+  <div class="picture">
+              <img class="circle" style="width: 700px;" src="https://bridebox.com/wp-content/uploads/2015/04/marital-problems.jpg" />
+            </div>
+
+  <%# <div class="fifteen columns outer-content" >
     <div class="content" id="schedule-slider" style="height:275px">
       <ul class="slides" style="height:275px">
 
-       <li id="sched-slide-0" style="height:275px">
+       <div id="sched-slide-0" style="height:275px">
             <div class="picture" style="margin: 0;width:160px;float:left">
             </div>
-
-<div class="card-trip">
-  <img src="https://cdn.rileygrey.com/77130/1c528a4e-7105-4f6f-855d-aeecdf0869c0.jpg" />
-  <img src="https://cdn.rileygrey.com/77130/a05a77cd-514b-42b8-8d6f-ad2a3717aa95.jpg" />
-  <img src="https://cdn.rileygrey.com/77130/97b6b784-5182-45f7-934e-3cab7475f7cd.jpg" />
-    
-
-  <div class="card-trip-infos">
-    </div>
-    </div>
-
-    <div>
-    <h3>ceremony</h3>
-    <p>After our quick dress-less rehearsal, we'll meet you over here at the Crosby Street Hotel bar. We've spent countless summer evenings here drinking in the cocktails and decor. Last moonrise as Hadley & Muller, help us howl!</p>
-    <p>ADDRESS:
-79 Crosby St New York, NY</p>
-    </div>
-    </div>
-
+            </div> %>
+<div class="text">
+<%= link_to "Add a new event", new_wedding_schedule_path(@wedding) %>
+<% i = 1 %>
 <% @schedules.each do |schedule| %>
-    <p><%= schedule.time.strftime("%I:%M%p") %></p>
-    <p><%= schedule.description %></p>
-    <div class = 'card-container' display-flex>
+    <% if i.odd?  %>
+        <div class="text-right">
+            <h3><%= schedule.time.strftime("%I:%M%p") %></h3>
+            <p><%= schedule.description %></p>
+        </div>
+    <% else %>
+        <div class="text-left">
+            <h3><%= schedule.time.strftime("%I:%M%p") %></h3>
+            <p><%= schedule.description %></p>
+        </div>
+    <% end %>
+    <% i += 1 %>
 <% end %>
+</div>

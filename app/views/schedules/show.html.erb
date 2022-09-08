@@ -1,0 +1,35 @@
+<h1 class="text-center mt-5 mb-5">Schedule</h1>
+<div class="schedule-page">
+  <%# <div class="sixteen columns section-title">
+    <hr/>
+  </div> %>
+  <div class="picture">
+              <img class="circle" style="width: 700px;" src="https://bridebox.com/wp-content/uploads/2015/04/marital-problems.jpg" />
+            </div>
+
+  <%# <div class="fifteen columns outer-content" >
+    <div class="content" id="schedule-slider" style="height:275px">
+      <ul class="slides" style="height:275px">
+
+       <div id="sched-slide-0" style="height:275px">
+            <div class="picture" style="margin: 0;width:160px;float:left">
+            </div>
+            </div> %>
+<div class="text">
+<%= link_to "Add a new event", new_wedding_schedule_path([:wedding_id]) %>
+<% i = 1 %>
+<% @schedules.each do |schedule| %>
+    <% if i.odd?  %>
+        <div class="text-right">
+            <h3><%= schedule.time.strftime("%I:%M%p") %></h3>
+            <p><%= schedule.description %></p>
+        </div>
+    <% else %>
+        <div class="text-left">
+            <h3><%= schedule.time.strftime("%I:%M%p") %></h3>
+            <p><%= schedule.description %></p>
+        </div>
+    <% end %>
+    <% i += 1 %>
+<% end %>
+</div>

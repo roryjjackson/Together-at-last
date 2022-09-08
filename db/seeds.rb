@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Schedule.destroy_all
+
+schedule_1 = Schedule.create!(wedding_id: 1, time: "9am", description: "Some text about whats happening")
+schedule_2 = Schedule.create!(wedding_id: 1, time: "12:30pm", description: "Some text about whats happening")
+schedule_3 = Schedule.create!(wedding_id: 1, time: "12pm", description: "Some text about whats happening")
+schedule_4 = Schedule.create!(wedding_id: 1, time: "7pm", description: "Some text about whats happening")
