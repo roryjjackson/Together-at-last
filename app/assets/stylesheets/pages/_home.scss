@@ -65,7 +65,19 @@
   color: rgb(85, 85, 85);
 }
 
-.navbar {
-  display: none;
-  visibility: hidden;
+// .navbar {
+//   display: none;
+//   visibility: hidden;
+// }
+
+.logo{
+  width: 690px;
+  height: 290px;
+  padding: 10px;
+  position:absolute;
+  left:0;
+  top:0;
+  display: flex;
+  align-items: initial;
+  justify-content: left;
 }
