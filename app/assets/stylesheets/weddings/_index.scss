@@ -1,6 +1,6 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   /* flex-grow: 1; */
   // padding: 16px;
@@ -11,7 +11,9 @@
 .main-container {
   display: grid;
   // grid-template-columns: 2fr 2fr 2fr 2fr;
-  // background-color: #f6c009;
+  background-color: #EDEDE9;
+  border: solid black 3px;
+  width: 100vw;
 }
 
 .card {
@@ -19,9 +21,22 @@
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
   border-radius: 4px;
   background-image: "https://cdn0.hitched.co.uk/article/0790/3_2/1280/jpg/110970-average-wedding-2021-national-wedding-survey.jpeg";
+  height: 300px;
+  width: 300px;
 }
 
 .btn {
   color: #E3D5CA;
+}
 
+.bar {
+  display: flex;
+  justify-content: center;
+}
+
+.add {
+  height: 20px;
+  width: 40vw;
+  border: solid black 3px;
+  height: 40px;
 }

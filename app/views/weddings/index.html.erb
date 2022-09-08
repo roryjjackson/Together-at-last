@@ -1,22 +1,22 @@
-
-<div class="searchbar" style="width: 50vw; padding-left: 43px; padding-right: 43px;">
-  <h3>Search for Wedding</h3>
-    <%= form_with url: root_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a wedding"
-    %>
-    <div class="button"><%= submit_tag "Search", class: "btn btn-primary" %></div>
-  <% end %>
+<div class="searchbar" style="width: 100vw;">
+    <%# <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+    <%# <%= text_field_tag :query, %>
+      <%# params[:query], %>
+      <%# class: "form-control", %>
+      <%# placeholder: "Find a wedding" %>
+    <%# %>
+      <div class="add">
+          <%= link_to "Add your new wedding", new_wedding_path, class: "btn btn-primary" %>
+      </div>
+  <div class="bar">
+    <div class="row">
+    </div>
   </div>
-  <div class="main-container" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://asset.cloudinary.com/dfipoufmj/241193d512dc0c7e208c168277be9f7e);">
+  <div class="main-container" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));">
     <div class="cards">
       <%@weddings.each do |wedding| %>
         <%= link_to wedding_wedding_guests_path(wedding), data: { "turbo-method": :post }, class:"text-decoration-none" do %>
-          <div class="card">
-            <%# <div class="card-photo"><%= cl_image_tag, width: 100, crop: :fill %>
-            <%# </div> %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path wedding.photos.first.key, height: 300, crop: :fill %>')">
             <h1 class="text-black mt-4"> <%= wedding.info %></h1>
             <p class="list-group-item text-black"><%= wedding.date %></p>
             <p class="list-group-item text-black"><%= wedding.page_heading %></p>
@@ -26,14 +26,15 @@
     </div>
   </div>
 </div>
-<img src="https://asset.cloudinary.com/dfipoufmj/241193d512dc0c7e208c168277be9f7e" alt="">
+
+<%# <img src="https://asset.cloudinary.com/dfipoufmj/241193d512dc0c7e208c168277be9f7e" alt=""> %>
 
 <%# <%= cl_image_tag("THE_IMAGE_ID_FROM_LIBRARY",
       width: 400, height: 300, crop: :fill) %>
 <%# <%= cl_image_tag("IMAGE_WITH_FACE_ID", %>
-      <%# width: 150, height: 150, crop: :thumb, gravity: :face) %> %> %>
-    <div>
-        <%= link_to "Add your new wedding", new_wedding_path, class: "btn btn-primary" %>
-    </div>
+      <%# width: 150, height: 150, crop: :thumb, gravity: :face) %>
 
 <%# style="background_image: url(https://images.squarespace-cdn.com/content/v1/59995c78cf81e0f88eb44923/1631571568489-L19ER02CR9964LDUIZ5H/**MC+x+Wolf+-+Soul+Scene-236.jpg?format=1500w)"> %>
+ <%# <div class="search col-6"><%= submit_tag "Search", class: "btn btn-primary" %>
+        <%# <% end %>
+        <%# </div> %>

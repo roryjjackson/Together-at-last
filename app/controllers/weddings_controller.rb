@@ -27,7 +27,7 @@ class WeddingsController < ApplicationController
 
   private
   def wedding_params
-    params.require(:wedding).permit(:info, :date, :page_heading)
+    params.require(:wedding).permit(:info, :date, :page_heading, photos: [] )
   end
 
 end
