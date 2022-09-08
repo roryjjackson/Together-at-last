@@ -1,17 +1,26 @@
-<div class="col-12 col-md-6 col-lg-4">
-<div class="container pt-8">
-<div class="row justify-content-center">
+<section class="text-center">
+  <!-- Background image -->
+<div class="banner" style="background-image: url(https://media-www.sqspcdn.com/images/pages/vertical/weddings/hero/hero.jpg);">
+  </div>
+  <div class="row d-flex justify-content-center align-items-center h-100">
+  <div class="card_signup mx-12 mx-lg-12 shadow-5-strong" style="
+        margin-top: -800px;
+        background: hsla(0, 0%, 100%, 0.8);
+        backdrop-filter: blur(30px);
+        ">
 
-<h2>Sign up</h2>
+      <h2>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :host, :as => :check_boxes,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "host" }%>
+
+      <%= f.input :host, :as => :check_boxes,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "host" }%>
+
     <%= f.input :first_name,
                 required: true,
                 autofocus: true,
@@ -34,10 +43,9 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up!" , class: "signin_button" %>
   </div>
 <% end %>
-<%= render "devise/shared/links" %>
-</div>
+<%# <%= render "devise/shared/links" %>
 </div>
 </div>
