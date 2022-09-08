@@ -21,6 +21,7 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-family: 'Noto Sans', sans-serif;
+  max-width: 500px;
 }
 
 .btn-ghost {
@@ -47,7 +48,7 @@
 
 .btn-flat:hover {
   background: #f0f0f0;
-  color: rgb(95, 95, 95);
+  color: rgb(61, 60, 60);
 }
 
 .btn-gradient {
