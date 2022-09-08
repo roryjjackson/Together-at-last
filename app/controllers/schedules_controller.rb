@@ -11,18 +11,19 @@ class SchedulesController < ApplicationController
     # raise
     if @schedule.save
       redirect_to wedding_path(@schedule)
-      raise
     else
       render :new, status: :unprocessable_entity
     end
   end
-  # def index
-  #   @schedules = Schedule.all
-  # end
 
-  # def show
-  #   @schedules = Schedule.find
-  # end
+  def index
+    @schedules = Schedule.all
+  end
+
+  def show
+    @schedules = Schedule.find
+  end
+
   private
 
   def schedule_params
