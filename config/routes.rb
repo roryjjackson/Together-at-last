@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :weddings do
     resources :pages, only: %i[new create]
-    resources :schedules, only: %i[new create]
+    resources :schedules, only: %i[index show new create]
     resources :rsvps, only: %i[new create]
     resources :wedding_guests, only: %i[create]
   end
-  resources :schedules, only: %i[index show]
+  # resources :schedules, only: %i[index show]
   resources :rsvps, only: %i[index show]
 
   # resources :pages, :weddings, :schedules, :rsvps
