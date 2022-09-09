@@ -6,24 +6,47 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-  file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80")
-  wedding.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
-  wedding.save!
-end
+WeddingGuest.destroy_all
+RegistryItem.destroy_all
+Registry.destroy_all
+AccomodationInfo.destroy_all
 
 Schedule.destroy_all
 Vip.destroy_all
 Wedding.destroy_all
 User.destroy_all
+
 user1 = User.create(email:"test1@test.com", password: "123456", first_name: "Mustak", last_name:"hi", host: true )
 user2 = User.create(email:"test2@test.com", password: "637822", first_name: "Rory", last_name:"hi", host: false )
 user3 = User.create(email:"test3@test.com", password: "654321", first_name: "Sharon", last_name:"hi", host: false )
 user4 = User.create(email:"test4@test.com", password: "112233", first_name: "Mustak", last_name:"hi", host: true )
 puts"user created #{User.count}"
-wedding_1 = Wedding.create!(user_id: user1.id, page_heading: "Mustak and Sharon", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
-wedding_2 = Wedding.create!(user_id: user2.id, page_heading: "Rory and James", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
-wedding_3 = Wedding.create!(user_id: user3.id, page_heading: "Mr and Mrs Jackson", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
-wedding_4 = Wedding.create!(user_id: user4.id, page_heading: "Mr and Mrs Bilal to be", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
+wedding_1 = Wedding.new(user_id: user1.id, page_heading: "Mustak and Sharon", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
+file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80")
+wedding_1.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
+wedding_1.save!
+
+
+wedding_2 = Wedding.new(user_id: user2.id, page_heading: "Rory and James", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
+file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80")
+wedding_2.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
+wedding_2.save!
+
+
+wedding_3 = Wedding.new(user_id: user3.id, page_heading: "Mr and Mrs Jackson", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
+file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80")
+wedding_3.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
+wedding_3.save!
+
+
+
+wedding_4 = Wedding.new(user_id: user4.id, page_heading: "Mr and Mrs Bilal to be", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
+file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80")
+wedding_4.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
+wedding_4.save!
+
+
+
 puts"wedding created #{Wedding.count}"
 vip_1 = Vip.create!(wedding_id: wedding_1.id, name: "Mustak", description: "First person to hit the reception dance floor after the couple: “Me. But Chase is notorious for that, too. I foresee and real dirty dance-off.", category: "Best man")
 vip_2 = Vip.create!(wedding_id: wedding_2.id, name: "Rory", description: "Must-have survival supply: “A Leatherman. And a flask of Heaven Hill whiskey, for those chilly nights camping you never know when you'll get unexpected company.”", category: "Groomsman")
@@ -47,27 +70,27 @@ schedule_14 = Schedule.create!(wedding_id: wedding_4.id, time: "12:30pm", descri
 schedule_15 = Schedule.create!(wedding_id: wedding_4.id, time: "12pm", description: "Although the courthouse will have our signatures on the dotted line, we know it won't be real in our eyes until you help us make the commitment. After some lip-locking, a Pablo Neruda poem and the string-quartet version of our all-time favorite jam (shhh it's a secret), we think the deal will be sealed.")
 schedule_16 = Schedule.create!(wedding_id: wedding_4.id, time: "7pm", description: "Although the courthouse will have our signatures on the dotted line, we know it won't be real in our eyes until you help us make the commitment. After some lip-locking, a Pablo Neruda poem and the string-quartet version of our all-time favorite jam (shhh it's a secret), we think the deal will be sealed.")
 puts"schedule created #{Schedule.count}"
-2:57
-accomodation_info_1 = AccomodationInfo.create!(wedding_id: wedding_1.id, url: "www.http/.com", title: "Manor hotel", description: "affordable 4 star hotel")
-accomodation_info_2 = AccomodationInfo.create!(wedding_id: wedding_2.id, url: "www.http/.com", title: "Foster hotel", description: "cheap 3 star hotel")
-accomodation_info_3 = AccomodationInfo.create!(wedding_id: wedding_3.id, url: "www.http/.com", title: "Hilton hotel", description: "expensive 5 star hotel")
-accomodation_info_4 = AccomodationInfo.create!(wedding_id: wedding_4.id, url: "www.http/.com", title: "Premier Inn", description: "cheap hotels")
-puts"accomodation_info created #{AccomodationInfo.count}"
-registry_1 = Registry.create!(user_id: user1.id, item_name: "Send money", description: "send the couple money")
-registry_2 = Registry.create!(user_id: user2.id, item_name: "Toaster", description: "A gold toaster")
-registry_3 = Registry.create!(user_id: user3.id, item_name: "Double bed", description: "Get the couple a double bed")
-registry_4 = Registry.create!(user_id: user4.id, item_name: "Air fryer", description: "Get the couple a air fryer because they can't cook to save their lives")
-puts"registry created #{Registry.count}"
-registry_item_1 = RegistryItem.create!(registry_id: registry_1.id, wedding_id: wedding_1.id)
-registry_item_2 = RegistryItem.create!(registry_id: registry_2.id, wedding_id: wedding_2.id)
-registry_item_3 = RegistryItem.create!(registry_id: registry_3.id, wedding_id: wedding_3.id)
-registry_item_4 = RegistryItem.create!(registry_id: registry_4.id, wedding_id: wedding_4.id)
-puts"registry_item created #{RegistryItem.count}"
-wedding_guest_1 = WeddingGuest.create!(user_id: user1.id, wedding_id: wedding_1.id)
-wedding_guest_2 = WeddingGuest.create!(user_id: user2.id, wedding_id: wedding_2.id)
-wedding_guest_3 = WeddingGuest.create!(user_id: user3.id, wedding_id: wedding_3.id)
-wedding_guest_4 = WeddingGuest.create!(user_id: user4.id, wedding_id: wedding_4.id)
-puts"wedding_guest created #{WeddingGuest.count}"
+# 2:57
+# accomodation_info_1 = AccomodationInfo.create!(wedding_id: wedding_1.id, url: "www.http/.com", title: "Manor hotel", description: "affordable 4 star hotel")
+# accomodation_info_2 = AccomodationInfo.create!(wedding_id: wedding_2.id, url: "www.http/.com", title: "Foster hotel", description: "cheap 3 star hotel")
+# accomodation_info_3 = AccomodationInfo.create!(wedding_id: wedding_3.id, url: "www.http/.com", title: "Hilton hotel", description: "expensive 5 star hotel")
+# accomodation_info_4 = AccomodationInfo.create!(wedding_id: wedding_4.id, url: "www.http/.com", title: "Premier Inn", description: "cheap hotels")
+# puts"accomodation_info created #{AccomodationInfo.count}"
+# registry_1 = Registry.create!(user_id: user1.id, item_name: "Send money", description: "send the couple money")
+# registry_2 = Registry.create!(user_id: user2.id, item_name: "Toaster", description: "A gold toaster")
+# registry_3 = Registry.create!(user_id: user3.id, item_name: "Double bed", description: "Get the couple a double bed")
+# registry_4 = Registry.create!(user_id: user4.id, item_name: "Air fryer", description: "Get the couple a air fryer because they can't cook to save their lives")
+# puts"registry created #{Registry.count}"
+# registry_item_1 = RegistryItem.create!(registry_id: registry_1.id, wedding_id: wedding_1.id)
+# registry_item_2 = RegistryItem.create!(registry_id: registry_2.id, wedding_id: wedding_2.id)
+# registry_item_3 = RegistryItem.create!(registry_id: registry_3.id, wedding_id: wedding_3.id)
+# registry_item_4 = RegistryItem.create!(registry_id: registry_4.id, wedding_id: wedding_4.id)
+# puts"registry_item created #{RegistryItem.count}"
+# wedding_guest_1 = WeddingGuest.create!(user_id: user1.id, wedding_id: wedding_1.id)
+# wedding_guest_2 = WeddingGuest.create!(user_id: user2.id, wedding_id: wedding_2.id)
+# wedding_guest_3 = WeddingGuest.create!(user_id: user3.id, wedding_id: wedding_3.id)
+# wedding_guest_4 = WeddingGuest.create!(user_id: user4.id, wedding_id: wedding_4.id)
+# puts"wedding_guest created #{WeddingGuest.count}"
 # rsvp_1 = Rsvp.create!(wedding_id: 1, meal_choice: "Chicken", spotify_song: "", attendance: "", attendee: "")
 # rsvp_2 = Rsvp.create!(wedding_id: 1, meal_choice: "Steak", spotify_song: "", attendance: "", attendee: "")
 # rsvp_3 = Rsvp.create!(wedding_id: 1, meal_choice: "Gluten free", spotify_song: "", attendance: "", attendee: "")

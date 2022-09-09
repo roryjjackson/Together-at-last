@@ -1,45 +1,23 @@
-<div class="page">
-<div>
-    <h1 class="header"> Upcoming Weddings </h1>
-</div>
-
-<%# <div class="main-container" style="background-image: url(https://media-www.sqspcdn.com/images/pages/vertical/weddings/hero/hero.jpg);">
+<div class="pagez">
+  <h1 class="header"> Upcoming Weddings </h1>
   <div class="cards">
     <%@weddings.each do |wedding| %>
-      <%# <%= link_to wedding_wedding_guests_path(wedding), data: { "turbo-method": :post }, class:"text-decoration-none" do %>
-        <%# <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path wedding.photos.first.key, height: 300, crop: :fill %>
-          <%# <h1 class="text-black mt-4"> <%= wedding.info %>
-          <%# <p class="list-group-item text-black"><%= wedding.date %>
-          <%# <p class="list-group-item text-black"><%= wedding.page_heading %>
-        <%# </div>
+    <%= link_to wedding_wedding_guests_path(wedding), data: { "turbo-method": :post }, class:"text-decoration-none" do %>
+    <div class="card mt-5">
+        <% wedding.photos.each do |photo| %>
+          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+        <div class= "card-body">
+          <h5 class="card-title"><%= wedding.page_heading %></h5>
+          <p class="wedding-card-text"> <%= wedding.info %></p>
+          <p class="wedding-card-text"><%= wedding.date %></p>
+          <%# <a href="#" class="btn btn-primary">select this wedding</a> %>
+        </div>
+      </div>
       <% end %>
-    <%# <% end %>
-  <%# </div>
-</div> %>
-
-
-<div class="cards">
-<%@weddings.each do |wedding| %>
-  <div class="card mt-5">
-     <%= link_to wedding_wedding_guests_path(wedding), data: { "turbo-method": :post }, class:"text-decoration-none" do %>
-        <%# <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path wedding.photos.first.key, height: 300, crop: :fill') "%>
-            <% wedding.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
-            <% end %>
-            <div class= "card-body">
-              <h5 class="card-title"><%= wedding.page_heading %></h5>
-              <p class="wedding-card-text"> <%= wedding.info %></p>
-              <p class="wedding-card-text"><%= wedding.date %></p>
-              <a href="#" class="btn btn-primary">select this wedding</a>
-            </div>
-    </div>
-     <% end %>
+      <% end %>
     <% end %>
-</div>
-
-
-<div class="add new">
-    <%= link_to "Add your new wedding", new_wedding_path, class: "btn btn-flat" %>
-</div>
-
+  </div>
+  <div class="add">
+      <%= link_to "Add your new wedding", new_wedding_path, class: "t btn-flat" %>
+  </div>
 </div>

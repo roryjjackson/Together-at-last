@@ -2,22 +2,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  /* flex-grow: 1; */
-  // padding: 16px;
-  border-radius: 8px;
-  margin: 30px;
+  // border-radius: 8px;
+  // margin: 30px;
+  background-color: #D6CCC2;
+  margin-left: 30px;
 }
 
 .wedding-card-text {
     color: black !important;
     padding-left: 0px !important;
-    font-size: 30px;
+    font-size: 10px;
     font-weight: bold;
     font-family: 'Cinzel', serif;
     z-index: 3;
 }
 
-.header h1 {
+.header {
   color: white;
   font-size: 80px;
   font-family: ‘Cinzel’, serif;
@@ -28,13 +28,13 @@
   position: relative;
 }
 
-.main-container {
-  display: grid;
-  // grid-template-columns: 2fr 2fr 2fr 2fr;
-  background-color: #D6CCC2;
-  border: solid black 3px;
-  width: 100vw;
-}
+// .main-container {
+//   display: grid;
+//   // grid-template-columns: 2fr 2fr 2fr 2fr;
+//   background-color: #D6CCC2;
+//   border: solid black 3px;
+//   width: 100vw;
+// }
 
 .card {
   padding: 20px;
@@ -44,7 +44,7 @@
   width: 300px;
 }
 
-.btn {
+.t {
   color: #E3D5CA;
 }
 
@@ -61,11 +61,19 @@
 }
 
 
-.card-columns {
-  @include media-breakpoint-only(lg) {
-    column-count: 3;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 3;
-  }
+// .card-columns {
+//   @include media-breakpoint-only(lg) {
+//     column-count: 3;
+//   }
+//   @include media-breakpoint-only(xl) {
+//     column-count: 3;
+//   }
+// }
+
+.pagez {
+  background-color: #D6CCC2;
+  // position: fixed;
+  // z-index: 0;
+  width: auto;
+  height: 100vh;
 }
