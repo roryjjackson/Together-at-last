@@ -7,22 +7,26 @@ class SchedulesController < ApplicationController
   def create
     @schedule = Schedule.new(schedule_params)
     @wedding = Wedding.find(params[:wedding_id])
-    @schedule.wedding_id = @wedding.id
-    # raise
-    if @schedule.save
-      redirect_to wedding_path(@schedule)
+    @schedule.wedding = @wedding
+    if @schedule.save!
+      redirect_to wedding_schedules_path(@wedding)
     else
       render :new, status: :unprocessable_entity
     end
   end
 
   def index
+    @wedding = Wedding.find(params[:wedding_id])
     @schedules = Schedule.all
   end
 
-  def show
-    @schedules = Schedule.find
+  def destroy
+    @schedules = Schedule.delete
   end
+
+#   def show
+#     @schedules = Schedule.all
+#   end
 
   private
 

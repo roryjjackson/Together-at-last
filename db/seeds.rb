@@ -20,3 +20,9 @@ user = User.create!(first_name: "Rory", last_name: "Jackson", email: "roryjackso
   )
   wedding.save!
 end
+
+Schedule.destroy_all
+schedule_1 = Schedule.create!(wedding_id: 1, time: "9am", description: "Some text about whats happening")
+schedule_2 = Schedule.create!(wedding_id: 1, time: "12:30pm", description: "Some text about whats happening")
+schedule_3 = Schedule.create!(wedding_id: 1, time: "12pm", description: "Some text about whats happening")
+schedule_4 = Schedule.create!(wedding_id: 1, time: "7pm", description: "Some text about whats happening")

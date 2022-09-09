@@ -21,7 +21,7 @@ class RsvpsController < ApplicationController
     @wedding = Wedding.find(params[:wedding_id])
     @rsvp.wedding_id = @wedding.id
     if @rsvp.save
-      redirect_to rsvps_path
+      redirect_to wedding_path(@wedding)
     else
       render :new, status: :unprocessable_entity
     end
