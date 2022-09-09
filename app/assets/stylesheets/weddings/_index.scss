@@ -8,6 +8,26 @@
   margin: 30px;
 }
 
+.wedding-card-text {
+    color: black !important;
+    padding-left: 0px !important;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    z-index: 3;
+}
+
+.header h1 {
+  color: white;
+  font-size: 80px;
+  font-family: ‘Cinzel’, serif;
+  // border: solid black 3px;
+  width: 100vw;
+  text-align: center;
+  z-index: 3;
+  position: relative;
+}
+
 .main-container {
   display: grid;
   // grid-template-columns: 2fr 2fr 2fr 2fr;
@@ -34,8 +54,18 @@
 }
 
 .add {
-  height: 20px;
-  width: 40vw;
-  border: solid black 3px;
-  height: 40px;
+  color: black !important;
+  padding-left: 0px !important;
+  font-size: 26px;
+  font-family: 'Cinzel', serif;
+}
+
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 3;
+  }
 }
