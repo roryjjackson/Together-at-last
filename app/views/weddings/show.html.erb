@@ -2,7 +2,7 @@
   <div class="buttonx">
     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
     <ul class="dropdown-menu dropdown-menu-dark">
-    <% if user_signed_in? %>
+      <% if user_signed_in? %>
         <li><a class="dropdown-item" href="/weddings">Exit</a></li>
         <li><hr class="dropdown-divider"></li>
         <li><%= link_to "Home", wedding_path(@wedding), class: "dropdown-item" %></li>
@@ -17,9 +17,11 @@
     </ul>
   </div>
   <div class="data">
-    <img src="https://images.pexels.com/photos/4060469/pexels-photo-4060469.jpeg?cs=srgb&dl=pexels-agostino-toselli-4060469.jpg&fm=jpg" alt="" class="image">
+    <img src="https://images.pexels.com/photos/4060469/pexels-photo-4060469.jpeg?cs=srgb&dl=pexels-agostino-toselli-4060469.jpg&fm=jpg" alt="" class="image1">
+    <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg" class="image3">
+    <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?cs=srgb&dl=pexels-emma-bauso-2253870.jpg&fm=jpg" class="image2">
     <h1><%= @wedding.page_heading %></h1>
+    <h2><%= @wedding.date %></h2>
+    <p><%= @wedding.info %></p>
   </div>
-  <h2><%= @wedding.date %></h2>
-  <p><%= @wedding.info %></p>
 </div>
