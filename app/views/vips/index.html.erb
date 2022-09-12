@@ -33,8 +33,8 @@
           <% if vip.photo.key.present? %>
             <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
           <% end %>
-          <%= (link_to "delete this person", vip_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
-          <%= (link_to "edit this person", edit_vip_path(vip)) if current_user.host? %>
+          <%= (link_to "delete this person", wedding_vips_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
+          <%= (link_to "edit this person", edit_wedding_path(vip)) if current_user.host? %>
           <% end %>
       </div>
       <h4 id="list-item-2">Bridesmaids</h4>
@@ -46,8 +46,8 @@
           <% if vip.photo.key.present? %>
             <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
           <% end %>
-          <%= (link_to "delete this person", vip_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
-          <%= (link_to "edit this person", edit_vip_path(vip)) if current_user.host? %>
+          <%= (link_to "delete this person", wedding_vips_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
+          <%= (link_to "edit this person", edit_wedding_path(vip)) if current_user.host? %>
         <% end %>
       </div>
       <h4 id="list-item-3">Parents of the Bride</h4>
@@ -59,8 +59,8 @@
           <% if vip.photo.key.present? %>
             <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
           <% end %>
-          <%= (link_to "delete this person", vip_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
-          <%= (link_to "edit this person", edit_vip_path(vip)) if current_user.host? %>
+          <%= (link_to "delete this person", wedding_vips_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
+          <%= (link_to "edit this person", edit_wedding_path(vip)) if current_user.host? %>
         <% end %>
       </div>
       <h4 id="list-item-4">Parents of the Groom</h4>
@@ -72,8 +72,8 @@
           <% if vip.photo.key.present? %>
             <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
           <% end %>
-          <%= (link_to "delete this person", vip_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
-          <%= (link_to "edit this person", edit_vip_path(vip)) if current_user.host? %>
+          <%= (link_to "delete this person", wedding_vips_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
+          <%= (link_to "edit this person", edit_wedding_path(vip)) if current_user.host? %>
         <% end %>
       </div>
     </div>
