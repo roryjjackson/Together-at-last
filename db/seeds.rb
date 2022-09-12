@@ -95,13 +95,8 @@ puts"schedule created #{Schedule.count}"
 
 # puts"wedding_guest created #{WeddingGuest.count}"
 
-# rsvp_1 = Rsvp.create!(wedding_id: 1, meal_choice: "Chicken", spotify_song: "", attendance: "", attendee: "")
-# rsvp_2 = Rsvp.create!(wedding_id: 1, meal_choice: "Steak", spotify_song: "", attendance: "", attendee: "")
-# rsvp_3 = Rsvp.create!(wedding_id: 1, meal_choice: "Gluten free", spotify_song: "", attendance: "", attendee: "")
-# rsvp_4 = Rsvp.create!(wedding_id: 1, meal_choice: "Vegan", spotify_song: "", attendance: "", attendee: "")
-
-
-
-
-
+rsvp_1 = Rsvp.create!(wedding_id: 2, meal_choice: "Chicken", spotify_song: "Moutains, Biffy Clyro", attendance: "Yes", attendee: "Rory Jackson")
+rsvp_2 = Rsvp.create!(wedding_id: 2, meal_choice: "Steak", spotify_song: "Get free, Major Lazer", attendance: "No", attendee: "Zoe Addleton")
+rsvp_3 = Rsvp.create!(wedding_id: 2, meal_choice: "Gluten free", spotify_song: "Stairway to Heaven, Led Zeppelin", attendance: "Yes", attendee: "Lousie Swinburne")
+rsvp_4 = Rsvp.create!(wedding_id: 2, meal_choice: "Vegan", spotify_song: "Hello, Adele", attendance: "Yes", attendee: "Orla James")
 
