@@ -9,7 +9,6 @@ class VipsController < ApplicationController
     @wedding = Wedding.find(params[:wedding_id])
     @vip.wedding = @wedding
     if @vip.save
-      # raise
       redirect_to wedding_vips_path(@wedding)
     else
       render :new, status: :unprocessable_entity
@@ -52,6 +51,6 @@ class VipsController < ApplicationController
   private
 
   def vip_params
-    params.require(:vip).permit(:time, :description, :name, :category)
+    params.require(:vip).permit(:time, :description, :name, :category, :photo)
   end
 end

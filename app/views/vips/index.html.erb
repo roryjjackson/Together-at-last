@@ -30,8 +30,8 @@
         <p><% @groomsmen.each do |vip| %>
           <h3><%= vip.name %></h3>
           <p><%= vip.description %></p>
-          <% vip.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+          <% if vip.photo.key.present? %>
+            <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
           <% end %>
           <%= (link_to "delete this person", vip_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
           <%= (link_to "edit this person", edit_vip_path(vip)) if current_user.host? %>
@@ -43,8 +43,8 @@
           <h3><%= vip.name %></h3>
           <p><%= vip.description %></p>
           <p><%= vip.category %></p>
-          <% vip.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+          <% if vip.photo.key.present? %>
+            <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
           <% end %>
           <%= (link_to "delete this person", vip_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
           <%= (link_to "edit this person", edit_vip_path(vip)) if current_user.host? %>
@@ -56,10 +56,9 @@
           <h3><%= vip.name %></h3>
           <p><%= vip.description %></p>
           <%= vip.category %></p>
-          <% vip.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+          <% if vip.photo.key.present? %>
+            <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
           <% end %>
-
           <%= (link_to "delete this person", vip_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
           <%= (link_to "edit this person", edit_vip_path(vip)) if current_user.host? %>
         <% end %>
@@ -70,8 +69,8 @@
           <h3><%= vip.name %></h3>
           <p><%= vip.description %></p>
           <%= vip.category %></p>
-          <% vip.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+          <% if vip.photo.key.present? %>
+            <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
           <% end %>
           <%= (link_to "delete this person", vip_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
           <%= (link_to "edit this person", edit_vip_path(vip)) if current_user.host? %>
