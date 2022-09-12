@@ -1,7 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
-# Examples:
+# Eamples:
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
@@ -10,12 +10,10 @@ WeddingGuest.destroy_all
 RegistryItem.destroy_all
 Registry.destroy_all
 AccomodationInfo.destroy_all
-
 Schedule.destroy_all
 Vip.destroy_all
 Wedding.destroy_all
 User.destroy_all
-
 user1 = User.create(email:"test1@test.com", password: "123456", first_name: "Mustak", last_name:"hi", host: true )
 user2 = User.create(email:"test2@test.com", password: "123456", first_name: "Rory", last_name:"hi", host: false )
 user3 = User.create(email:"test3@test.com", password: "123456", first_name: "Rory", last_name:"hi", host: false )
@@ -73,23 +71,37 @@ puts"schedule created #{Schedule.count}"
 # accomodation_info_2 = AccomodationInfo.create!(wedding_id: wedding_2.id, url: "www.http/.com", title: "Foster hotel", description: "cheap 3 star hotel")
 # accomodation_info_3 = AccomodationInfo.create!(wedding_id: wedding_3.id, url: "www.http/.com", title: "Hilton hotel", description: "expensive 5 star hotel")
 # accomodation_info_4 = AccomodationInfo.create!(wedding_id: wedding_4.id, url: "www.http/.com", title: "Premier Inn", description: "cheap hotels")
+
 # puts"accomodation_info created #{AccomodationInfo.count}"
+
 # registry_1 = Registry.create!(user_id: user1.id, item_name: "Send money", description: "send the couple money")
 # registry_2 = Registry.create!(user_id: user2.id, item_name: "Toaster", description: "A gold toaster")
 # registry_3 = Registry.create!(user_id: user3.id, item_name: "Double bed", description: "Get the couple a double bed")
 # registry_4 = Registry.create!(user_id: user4.id, item_name: "Air fryer", description: "Get the couple a air fryer because they can't cook to save their lives")
+
 # puts"registry created #{Registry.count}"
+
 # registry_item_1 = RegistryItem.create!(registry_id: registry_1.id, wedding_id: wedding_1.id)
 # registry_item_2 = RegistryItem.create!(registry_id: registry_2.id, wedding_id: wedding_2.id)
 # registry_item_3 = RegistryItem.create!(registry_id: registry_3.id, wedding_id: wedding_3.id)
 # registry_item_4 = RegistryItem.create!(registry_id: registry_4.id, wedding_id: wedding_4.id)
+
 # puts"registry_item created #{RegistryItem.count}"
+
 # wedding_guest_1 = WeddingGuest.create!(user_id: user1.id, wedding_id: wedding_1.id)
 # wedding_guest_2 = WeddingGuest.create!(user_id: user2.id, wedding_id: wedding_2.id)
 # wedding_guest_3 = WeddingGuest.create!(user_id: user3.id, wedding_id: wedding_3.id)
 # wedding_guest_4 = WeddingGuest.create!(user_id: user4.id, wedding_id: wedding_4.id)
+
 # puts"wedding_guest created #{WeddingGuest.count}"
+
 # rsvp_1 = Rsvp.create!(wedding_id: 1, meal_choice: "Chicken", spotify_song: "", attendance: "", attendee: "")
 # rsvp_2 = Rsvp.create!(wedding_id: 1, meal_choice: "Steak", spotify_song: "", attendance: "", attendee: "")
 # rsvp_3 = Rsvp.create!(wedding_id: 1, meal_choice: "Gluten free", spotify_song: "", attendance: "", attendee: "")
 # rsvp_4 = Rsvp.create!(wedding_id: 1, meal_choice: "Vegan", spotify_song: "", attendance: "", attendee: "")
+
+
+
+
+
+
