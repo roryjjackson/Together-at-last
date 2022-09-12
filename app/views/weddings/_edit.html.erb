@@ -1,0 +1,6 @@
+  <%= simple_form_for(@wedding) do |f| %>
+    <!-- [...] -->
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= f.submit :submit, input_html: { class: 'button'} %>
+    <!-- [...] -->
+  <% end %>
