@@ -35,9 +35,26 @@ file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ix
 wedding_3.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 wedding_3.save!
 
+
+
+
+wedding_4 = Wedding.new(user_id: user4.id, page_heading: "Mr and Mrs Bilal to be", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
+file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-9")
+wedding_4.save!
+
+puts "creating accomodations"
+accomodation = AccomodationInfo.create(title: "Cama", description: "Cama has a beautiful swimming pool, is surrounded by nature, and the attention to our tenants is familiar and close.", address: "Ibiza", wedding: wedding_1)
+
+
+
+puts '#{Wedding.count} wedding created'
+
+vip_1 = Vip.create!(wedding_id: wedding_1.id, name: "Mustak", description: "First person to hit the reception dance floor after the couple: “Me. But Chase is notorious for that, too. I foresee and real dirty dance-off.", category: "Best man")
+
 puts"wedding created #{Wedding.count}"
 
 vip_1 = Vip.create!(wedding_id: wedding_2.id, name: "Mustak", description: "First person to hit the reception dance floor after the couple: “Me. But Chase is notorious for that, too. I foresee and real dirty dance-off.", category: "Groomsman")
+
 vip_2 = Vip.create!(wedding_id: wedding_2.id, name: "Rory", description: "Must-have survival supply: “A Leatherman. And a flask of Heaven Hill whiskey, for those chilly nights camping you never know when you'll get unexpected company.”", category: "Groomsman")
 vip_3 = Vip.create!(wedding_id: wedding_2.id, name: "Sharon", description: "Best book to bring on vacation: “Tiny Beautiful Things by Cheryl Strayed. It's smart and witty and fun. Since the book is a collection of advice-column letters, you can flip open and read a couple at a time, which is nice for a bus ride or before a nap by the ocean.", category: "Bridesmaid")
 vip_4 = Vip.create!(wedding_id: wedding_2.id, name: "Tony", description: "You're at karaoke, what is your go-to crowd pleaser? “The last time I hit the mic, maybe two years ago, it was my buddy's bachelor party weekend. I did that Les Mis song 'On My Own'. Don't judge. It was after numerous Sake bombs, and, for the record, it brought down the house", category: "Groomsman" )

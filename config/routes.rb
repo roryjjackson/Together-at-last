@@ -7,7 +7,11 @@ Rails.application.routes.draw do
     resources :schedules, only: %i[index show new create]
     resources :rsvps, only: %i[new create index show]
     resources :wedding_guests, only: %i[create]
+
+    resources :accomodation_info
+
     resources :vips, only: %i[new create show index]
+
   end
   # resources :schedules, only: %i[index show]
   # resources :rsvps, only: %i[]
