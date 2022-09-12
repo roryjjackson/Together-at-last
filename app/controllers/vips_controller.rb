@@ -18,7 +18,10 @@ class VipsController < ApplicationController
 
   def index
     @wedding = Wedding.find(params[:wedding_id])
-    @vips = Vip.all
+    @bridesmaids = Vip.where(category: "Bridesmaid")
+    @groomsmen = Vip.where(category: "Groomsman")
+    @pgroom = Vip.where(category: "Parent of the groom")
+    @pbride = Vip.where(category: "Parent of the bride")
   end
 
   def edit
