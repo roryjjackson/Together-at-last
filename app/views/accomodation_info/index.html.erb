@@ -1,24 +1,34 @@
-  <h1>Accomodation</h1>
-  <%# <div class = 'card-container' display-flex></div> %>
-  <div class="card-trip w-100 d-flex ">
-    <img src="https://cdn.rileygrey.com/77130/435a320f-b7b8-40b6-9f41-75508ff8a8ac.jpg" />
-    <img src="https://cdn.rileygrey.com/77130/2834d638-6b56-4613-8fbf-b1152618677e.jpg" />
-    <img src="https://cdn.rileygrey.com/47883/df349c0d-8042-4121-ad88-b4fb524e673b.jpg" />
-  </div>
-  <div class="card-trip-infos">
 
-  <% @accomodation_info.each do |accomodation_info| %>
-      <div class="info">
-        <h2><%= accomodation_info.title %></h2>
-        <h3>description</h3>
-        <p><%= accomodation_info.description %></p>
-        <h3>URL</h3>
-        <p><%= accomodation_info.url %></p>
-         <%= link_to "View", accomodation_info_path(accomodation_info) %>
+
+<div class="entire">
+  <h1 class="header">Accomodation</h1>
+  <div class="main-container">
+    <div class="accom_cards">
+
+      <% @accomodation_info.each do |accomodation_info| %>
+        <div class="row mt-5 ml-5" style="width: 28rem; height: 14rem;">
+         <div class="card-body">
+          <div id="card-title">
+            <h1><%= accomodation_info.title %></h1>
+            <p class="card-text"><%= accomodation_info.description %></p>
+            <p class="card-address"><%= accomodation_info.address %></p>
+            <a href="https://www.airbnb.com.au/rooms/26555902?source_impression_id=p3_1662995947_7F%2BjrArOZ%2F65b1ij"  target="_blank" class="btn btn-primary">Book a room</a>
+          </div>
+          <%# <p><%= accomodation_info.url %>
+          <%# <%# <h3>Adress</h3> %>
+          <%# <%= link_to "View", accomodation_info_path(accomodation_info) %>
+         <%# </div> %>
+          </div>
+        </div>
+      <% end%>
       </div>
-  <% end %>
 
+    <div id="map">
+      <div class="map" style="height: 100vh; padding-bottom: 40px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
   </div>
-
-      
-    
+</div>
