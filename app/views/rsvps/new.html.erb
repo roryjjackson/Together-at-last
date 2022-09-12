@@ -2,7 +2,7 @@
   <%= simple_form_for([@wedding,@rsvp]) do |f| %>
     <%= f.input :meal_choice %>
     <%= f.input :spotify_song %>
-    <%= f.input :attendance %>
+    <%= f.input :attendance, :collection => %w[Yes No] %>
     <%= f.input :attendee %>
     <%= f.submit "Complete the form", class: "btn btn-primary" %>
   <% end %>

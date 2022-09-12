@@ -6,6 +6,7 @@
         <li><a class="dropdown-item" href="/weddings">Exit</a></li>
         <li><hr class="dropdown-divider"></li>
         <li><%= link_to "Home", wedding_path(@wedding), class: "dropdown-item" %></li>
+        <li><%= link_to "RSVP", wedding_rsvps_path(@wedding), class: "dropdown-item" %></li>
         <li><%= link_to "RSVP", new_wedding_rsvp_path(@wedding), class: "dropdown-item" %></li>
         <li><%= link_to "Schedule", wedding_schedules_path(@wedding), class: "dropdown-item" %></li>
         <li><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %></li>

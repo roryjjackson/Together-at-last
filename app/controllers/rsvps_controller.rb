@@ -1,7 +1,12 @@
 class RsvpsController < ApplicationController
   def index
-    @rsvps = Rsvp.all
-    # raise
+    @wedding = Wedding.find(params[:wedding_id])
+    @rsvps = Rsvp.where(wedding_id: @wedding.id)
+    @total_participants = 0
+    @rsvps.each do |rsvp|
+      @total_participants += 1 if rsvp.attendance == "Yes"
+    end
+
   end
 
   def show

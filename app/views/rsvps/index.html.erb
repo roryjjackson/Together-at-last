@@ -1,1 +1,10 @@
-<p>RSVP index page</p>
+<h1>RSVP</h1>
+<% @rsvps.each do |rsvp| %>
+  <%= rsvp.attendee %>
+  <%= rsvp.attendance %>
+  <%= rsvp.meal_choice %>
+  <%= rsvp.spotify_song %>
+<% end %>
+
+<p>Total guests coming</p>
+<%= @total_participants %>
