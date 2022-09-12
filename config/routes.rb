@@ -7,10 +7,13 @@ Rails.application.routes.draw do
     resources :schedules, only: %i[index show new create]
     resources :rsvps, only: %i[new create]
     resources :wedding_guests, only: %i[create]
+    resources :vips, only: %i[new create show index]
   end
   # resources :schedules, only: %i[index show]
   resources :rsvps, only: %i[index show]
-
+  resources :vips, only: %i[destroy update edit]
+  # resources :vips, only
+  # delete "weddings/vips/:id"
   # resources :pages, :weddings, :schedules, :rsvps
   # Defines the root path route ("/")
   # root "articles#index"

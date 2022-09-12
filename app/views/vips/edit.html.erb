@@ -1,0 +1,7 @@
+<%= simple_form_for(@vip) do |f| %>
+<%= f.input :name %>
+<%= f.input :description %>
+<%= f.input :category %>
+<%= f.input :photos, as: :file, input_html: { multiple: true } %>
+<%= f.submit "update vip", class: "btn btn-primary" %>
+<% end %>
