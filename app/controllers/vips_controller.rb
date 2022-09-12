@@ -44,9 +44,9 @@ class VipsController < ApplicationController
     # raise
   end
 
-#   def show
-#     @vips = vip.all
-#   end
+  def show
+    @vips = vip.all
+  end
 
   private
 

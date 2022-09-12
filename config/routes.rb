@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
     resources :accomodation_info
 
-    resources :vips, only: %i[new create show index]
+    resources :vips, only: %i[new create show index edit]
 
   end
   # resources :schedules, only: %i[index show]

@@ -36,12 +36,6 @@ wedding_3.photos.attach(io: file, filename: "nes.png", content_type: "image/png"
 wedding_3.save!
 
 
-
-
-wedding_4 = Wedding.new(user_id: user4.id, page_heading: "Mr and Mrs Bilal to be", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
-file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-9")
-wedding_4.save!
-
 puts "creating accomodations"
 accomodation = AccomodationInfo.create(title: "Cama", description: "Cama has a beautiful swimming pool, is surrounded by nature, and the attention to our tenants is familiar and close.", address: "Ibiza", wedding: wedding_1)
 
@@ -112,8 +106,15 @@ puts"schedule created #{Schedule.count}"
 
 # puts"wedding_guest created #{WeddingGuest.count}"
 
-rsvp_1 = Rsvp.create!(wedding_id: 2, meal_choice: "Chicken", spotify_song: "Moutains, Biffy Clyro", attendance: "Yes", attendee: "Rory Jackson")
-rsvp_2 = Rsvp.create!(wedding_id: 2, meal_choice: "Steak", spotify_song: "Get free, Major Lazer", attendance: "No", attendee: "Zoe Addleton")
-rsvp_3 = Rsvp.create!(wedding_id: 2, meal_choice: "Gluten free", spotify_song: "Stairway to Heaven, Led Zeppelin", attendance: "Yes", attendee: "Lousie Swinburne")
-rsvp_4 = Rsvp.create!(wedding_id: 2, meal_choice: "Vegan", spotify_song: "Hello, Adele", attendance: "Yes", attendee: "Orla James")
-
+rsvp_1 = Rsvp.new(meal_choice: "Chicken", spotify_song: "Moutains, Biffy Clyro", attendance: "Yes", attendee: "Rory Jackson")
+rsvp_1.wedding = wedding_2
+rsvp_1.save!
+rsvp_2 = Rsvp.new(meal_choice: "Steak", spotify_song: "Get free, Major Lazer", attendance: "No", attendee: "Zoe Addleton")
+rsvp_2.wedding = wedding_2
+rsvp_2.save!
+rsvp_3 = Rsvp.new(meal_choice: "Gluten free", spotify_song: "Stairway to Heaven, Led Zeppelin", attendance: "Yes", attendee: "Lousie Swinburne")
+rsvp_3.wedding = wedding_2
+rsvp_3.save!
+rsvp_4 = Rsvp.new(meal_choice: "Vegan", spotify_song: "Hello, Adele", attendance: "Yes", attendee: "Orla James")
+rsvp_4.wedding = wedding_2
+rsvp_4.save!
