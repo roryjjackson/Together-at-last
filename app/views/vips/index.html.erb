@@ -1,0 +1,81 @@
+<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <% if user_signed_in? %>
+      <li><a class="dropdown-item" href="/weddings">Exit</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><%= link_to "Home", wedding_path(@wedding), class: "dropdown-item" %></li>
+      <li><%= link_to "RSVP", new_wedding_rsvp_path(@wedding), class: "dropdown-item" %></li>
+      <li><%= link_to "Meet some new faces", wedding_vips_path(@wedding), class: "dropdown-item" %></li>
+      <li><%= link_to "Schedule", wedding_schedules_path(@wedding), class: "dropdown-item" %></li>
+      <li><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %></li>
+    <% else %>
+      <li><%= link_to "Login", new_user_session_path, class: "nav-link" %></li>
+    <% end %>
+  </ul>
+  <%= (link_to "Add a new vip", new_wedding_vip_path, class: "btnx") if current_user.host? %>
+
+<div class="row">
+  <div class="col-4">
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#list-item-1">Groomsen</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-2">Bridesmaids</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-3">Parents of the bride</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-4">Parents of the groom</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+      <h4 id="list-item-1">Groomsmen</h4>
+      <div>
+        <p><% @groomsmen.each do |vip| %>
+          <h3><%= vip.name %></h3>
+          <p><%= vip.description %></p>
+          <% if vip.photo.key.present? %>
+            <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+          <% end %>
+          <%= (link_to "delete this person", vip_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
+          <%= (link_to "edit this person", edit_vip_path(vip)) if current_user.host? %>
+          <% end %>
+      </div>
+      <h4 id="list-item-2">Bridesmaids</h4>
+      <div>
+        <p><% @bridesmaids.each do |vip| %>
+          <h3><%= vip.name %></h3>
+          <p><%= vip.description %></p>
+          <p><%= vip.category %></p>
+          <% if vip.photo.key.present? %>
+            <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+          <% end %>
+          <%= (link_to "delete this person", vip_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
+          <%= (link_to "edit this person", edit_vip_path(vip)) if current_user.host? %>
+        <% end %>
+      </div>
+      <h4 id="list-item-3">Parents of the Bride</h4>
+      <div>
+        <p><% @pbride.each do |vip| %>
+          <h3><%= vip.name %></h3>
+          <p><%= vip.description %></p>
+          <%= vip.category %></p>
+          <% if vip.photo.key.present? %>
+            <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+          <% end %>
+          <%= (link_to "delete this person", vip_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
+          <%= (link_to "edit this person", edit_vip_path(vip)) if current_user.host? %>
+        <% end %>
+      </div>
+      <h4 id="list-item-4">Parents of the Groom</h4>
+      <div>
+        <p><% @pgroom.each do |vip| %>
+          <h3><%= vip.name %></h3>
+          <p><%= vip.description %></p>
+          <%= vip.category %></p>
+          <% if vip.photo.key.present? %>
+            <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+          <% end %>
+          <%= (link_to "delete this person", vip_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
+          <%= (link_to "edit this person", edit_vip_path(vip)) if current_user.host? %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

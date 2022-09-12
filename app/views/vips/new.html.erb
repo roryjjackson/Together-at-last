@@ -1,0 +1,7 @@
+<%= simple_form_for([@wedding, @vip]) do |f| %>
+<%= f.input :name %>
+<%= f.input :description %>
+<%= f.input :category %>
+<%= f.input :photo, as: :file %>
+<%= f.submit "add vip", class: "btn btn-primary" %>
+<% end %>
