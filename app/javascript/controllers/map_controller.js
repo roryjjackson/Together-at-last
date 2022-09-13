@@ -19,14 +19,16 @@ export default class extends Controller {
       style: "mapbox://styles/mapbox/streets-v10"
     })
 
-    document.getElementById('card-title').addEventListener('click', () => {
+    let titles = document.querySelectorAll('#card-title');
 
-      let address = document.getElementById('card-title').childNodes[5].innerText
+    titles.forEach (node => node.addEventListener('click', (e) => {
+
+      let address = e.currentTarget.childNodes[5].innerText
 
       fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${key}`)
       .then(response => response.json())
       .then(data => mapLng = data.features[0].center[1]);
-    // trafalgar square was this.locationTarget.value but not working so we hard coded it
+
       fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${key}`)
       .then(response => response.json())
       .then(data => mapLat = data.features[0].center[0]);
@@ -38,7 +40,16 @@ export default class extends Controller {
         ])
       , 500)
 
-    });
+      }
+    ))
+
+    // const modalMap = this.map;
+
+    // const resizeMap = () => {
+    //   modalMap.resize();
+    // }
+
+    // setInterval(resizeMap, 100);
 
     this.#addMarkersToMap()
     this.#fitMapToMarkers()

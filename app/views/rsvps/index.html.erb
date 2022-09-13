@@ -1,10 +1,44 @@
-<h1>RSVP</h1>
-<% @rsvps.each do |rsvp| %>
-  <%= rsvp.attendee %>
-  <%= rsvp.attendance %>
-  <%= rsvp.meal_choice %>
-  <%= rsvp.spotify_song %>
-<% end %>
+<div class="rsvp">
+<h1 class="text-title">RSVP</h1>
 
-<p>Total guests coming</p>
-<%= @total_participants %>
+<%# <p class="card-content"><% @rsvps.each do |rsvp| %>
+  <%# <%= rsvp.attendee %> 
+  <%# <%= rsvp.attendance %> 
+  <%# <%= rsvp.meal_choice %> 
+  <%# <%= rsvp.spotify_song %> 
+<%# <% end %>
+<%# </p> %>
+
+<%# <div>
+  <img class="rsvpphoto" src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071844/development/DSC02485_g4xrxf.jpg"> %>
+
+ 
+
+  <div class="table-container">
+    <table class="table">
+      <tr>
+        <th>name</th>
+        <th>attendance</th>
+        <th>meal_choice</th>
+        <th>spotify_song</th>
+      </tr>
+
+      <p>Total guests coming:</p>
+      <%= @total_participants %>
+
+      <tr>
+      <% @rsvps.each do |rsvp| %>
+        <td><%=rsvp.attendee%></td>
+        <td><%=rsvp.attendance%></td>
+        <td><%=rsvp.meal_choice unless rsvp.attendance == "No"%></td>
+        <td><%=rsvp.spotify_song unless rsvp.attendance == "No"%></td>
+      </tr>
+      <% end %>
+      </table>
+    <%# </div> %>
+   </div>
+  </div>
+
+
+
+
