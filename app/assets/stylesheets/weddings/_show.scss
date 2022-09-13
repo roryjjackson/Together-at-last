@@ -3,103 +3,144 @@
   justify-content: right;
 }
 
-.buttonx {
-  display: flex;
-  justify-content: right;
-  background-color: #D6CCC2;
-}
-
-.buttonx button {
-  background-color: #D6CCC2;
-  border: none;
-  color: white;
-}
-
-.buttonx button:hover {
-  background-color: #D6CCC2;
-  border: solid white 3px;
-  // color: white;
-}
-
 .page {
-  background-color: #D6CCC2;
+  // background-color: #D6CCC2;
   height: 100vh;
   width: auto;
-  z-index: 1;
+  z-index: -1;
+  // background-image: url(https://res.cloudinary.com/dzyug4vno/image/upload/v1663071836/development/DSC02456_mui4wt.jpg);
+  // object-fit: cover;
+  // background-color: #EFE4D8;
+  // filter: brightness(60%);
 }
 
 .data h1 {
-  color: white;
-  font-size: 100px;
+  // color: rgba(115,115,115,115);
+  color: #1d2720;
+  font-size: 120px;
   font-family: ‘Cinzel’, serif;
-  // border: solid black 3px;
+  // border: solid white 3px;
   width: 100vw;
   text-align: center;
-  z-index: 3;
+  z-index: 4;
   position: relative;
-  padding-top: 180px;
+  padding-top: 140px;
+  margin-left: 30px;
+  // text-shadow: 0 2px 2px 2px white;
+  // background-color: rgba(255, 255, 255, 0.255);
+  // background-color: #fffdfd3f;
+  // display: inline;
+  // padding: .25em 0;
+  // background: white;
+  // color: #ffffff;
+  // box-shadow: .5em 0 0 #FFC107, -.5em 0 0 #FFC107;
+
 }
 
+
 .data h2 {
-  color: white;
+  color: rgba(115,115,115,115);
   font-size: 40px;
-  // padding-left: 200px;
   font-family: ‘Cinzel’, serif;
-  // border: solid black 3px;
   text-align: center;
-  z-index: 3;
+  z-index: 4;
   position: relative;
+  padding-right: 400px;
+  // background-color: #fffdfd3f;
+}
+
+#gallery {
+  color: rgba(115,115,115,115);
+  font-size: 40px;
+  font-family: ‘Cinzel’, serif;
+  text-align: center;
+  z-index: 4;
+  position: relative;
+  margin-right: 200px;
+  margin-top: 150px;
 }
 
 .data p {
-  color: white;
-  font-size: 26px;
-  // padding: 120px;
+  color: rgba(115,115,115,115);
+  font-size: 18px;
   font-family: ‘Cinzel’, serif;
-  // border: solid black 3px;
-  padding-top: 90px;
-  padding-left: 170px;
-  z-index: 3;
+  margin-top: 280px;
+  margin-left: 100px;
+  z-index: 4;
   position: relative;
+  max-width: 700px;
 }
 
-.data {
-  position: relative;
-  // border: 3px solid #73AD21;
+// .data {
+//   position: relative;
+//   // border: 3px solid #73AD21;
 
-}
+// }
 
 .image5 {
-  height: 500px;
+  height: 510px;
   object-fit: cover;
-//  padding: 200px;
-//   // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   position: absolute;
   z-index: 2;
-  margin-top: 80px;
-  margin-left: 100px;
+  margin-top: 40px;
+  margin-left: 40px;
+  box-shadow: 0 4px 4px 0;
 }
 
 .image2 {
-  height: 390px;
+  height: 400px;
   object-fit: cover;
   position: absolute;
   z-index: 3;
-  margin-top: 370px;
-  margin-bottom: 30px;
-  margin-left: 700px;
+  margin-top: 500px;
+  // margin-bottom: 700px;
+  margin-left: 950px;
+  box-shadow: 0 4px 4px 0;
+
 }
 
 .image3 {
-  height: 200px;
+  height: 380px;
   object-fit: cover;
-  position: fixed;
+  position: absolute;
   z-index: 4;
-  margin-bottom: 800px;
-  margin-left: 980px;
+  margin-top: 40px;
+  margin-left: 1080px;
+  box-shadow: 0 4px 4px 0;
+
 }
 
-#carouselExampleControls{
-width: 675px;
+.carousel-item {
+  box-shadow: 0 4px 4px 0;
 
+}
+
+#edit_wedding_8 {
+  width: 300px;
+}
+
+#carouselExampleControls {
+  width: 465px;
+}
+
+.media-share {
+  // border: solid black 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 190px;
+  height: 700px;
+}
+
+.add-media {
+  // background-color: black;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
