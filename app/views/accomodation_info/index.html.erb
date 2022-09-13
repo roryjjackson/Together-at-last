@@ -11,7 +11,7 @@
           <div id="card-title">
             <h1 class="card-title"><%= accomodation_info.title %></h1>
             <p class="card-text"><%= accomodation_info.description %></p>
-            <p class="card-address"><%= accomodation_info.address %></p>
+            <p class="card-address">📍 <%= accomodation_info.address %></p>
             <a href="https://www.airbnb.com.au/rooms/26555902?source_impression_id=p3_1662995947_7F%2BjrArOZ%2F65b1ij"  target="_blank" class="btn btn-flat">Book a room</a>
           </div>
           <%# <p><%= accomodation_info.url %>
@@ -20,11 +20,11 @@
          <%# </div> %>
           </div>
         </div>
-      <% end%>
+      <% end %>
       </div>
 
     <div id="map">
-      <div class="map" style="height: 100vh; padding-bottom: 40px;"
+      <div class="map" style="height: 75vh; padding-bottom: 40px;"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">

@@ -13,7 +13,7 @@ class AccomodationInfoController < ApplicationController
   end
 
   def index
-    @accomodation_info = AccomodationInfo.all
+    @accomodation_info = AccomodationInfo.where(wedding: @wedding)
     @markers = @accomodation_info.geocoded.map do |accomodation|
       {
         lat: accomodation.latitude,

@@ -6,7 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
 require "faker"
+=======
+puts "destroying everything!"
+
 
 WeddingGuest.destroy_all
 RegistryItem.destroy_all
@@ -16,34 +20,42 @@ Schedule.destroy_all
 Vip.destroy_all
 Wedding.destroy_all
 User.destroy_all
+
+puts "everything destroyed!"
+
+puts "creating 3 users"
 user1 = User.create(email:"test1@test.com", password: "123456", first_name: "Mustak", last_name:"hi", host: true )
 user2 = User.create(email:"test2@test.com", password: "123456", first_name: "Rory", last_name:"hi", host: false )
 user3 = User.create(email:"test3@test.com", password: "123456", first_name: "Rory", last_name:"hi", host: false )
 
-puts"user created #{User.count}"
+puts "user created #{User.count} users"
 
-wedding_1 = Wedding.new(user_id: user1.id, page_heading: "Mustak and Sharon", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: "Jan 6, 2024 08:00:00")
+puts "creating 3 weddings"
+
+wedding_1 = Wedding.new(user_id: user1.id, page_heading: "Mustak and Sharon", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
 file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80")
 wedding_1.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 wedding_1.save!
 
-wedding_2 = Wedding.new(user_id: user2.id, page_heading: "Rory and James", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: "Aug 17, 2022 10:00:00")
+wedding_2 = Wedding.new(user_id: user2.id, page_heading: "Rory and James", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
 file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80")
 wedding_2.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 wedding_2.save!
 
-wedding_3 = Wedding.new(user_id: user3.id, page_heading: "Mr and Mrs Jackson", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: "Nov 23, 2023 10:00:00")
+wedding_3 = Wedding.new(user_id: user3.id, page_heading: "Mr and Mrs Jackson", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
 file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80")
 wedding_3.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 wedding_3.save!
 
+puts "user created #{Wedding.count} weddings"
 
-puts "creating accomodations"
-accomodation = AccomodationInfo.create(title: "Cama", description: "Cama has a beautiful swimming pool, is surrounded by nature, and the attention to our tenants is familiar and close.", address: "Ibiza", wedding: wedding_1)
+puts "creating 4 accomodations"
+accomodation1 = AccomodationInfo.create(title: "Ritz Paris - Stay with us", description: "The Ritz Paris has reopened in June 2016 after an unprecedented restoration. The legendary hotel opens its doors with 71 luxurious suites, including 16 historic Prestige Suites, and 71 rooms. ", address: "15 Place Vendome, 75001 Paris France", wedding: wedding_1)
+accomodation2 = AccomodationInfo.create(title: "Kimpton St Honore Paris", description: "Moments away from the Opera House, the iconic department stores, the Faubourg St Honoré and the Tuileries Garden, Kimpton St Honoré Paris features 149 beautifully appointed guestrooms and suites.", address: "27-29 boulevard des Capucines, 75002 Paris France", wedding: wedding_1)
+accomodation3 = AccomodationInfo.create(title: "Hyatt Regency Paris", description: "Hyatt Regency Paris Etoile, formerly the renowned Hotel Concorde La Fayette, stands as one of the most impressive properties in the city.", address: "22 rue Danielle Casanova, 75002 Paris France", wedding: wedding_1)
+accomodation4 = AccomodationInfo.create(title: "The Westin Paris", description: "4-star hotel with 24-hour fitness and swimming pool, near the city center.", address: "3, Rue De Castiglione, 75001 Paris France", wedding: wedding_1)
 
-
-
-puts '#{Wedding.count} wedding created'
+puts "user created #{AccomodationInfo.count} accomdations"
 
 vip_1 = Vip.create!(wedding_id: wedding_1.id, name: "Mustak", description: "First person to hit the reception dance floor after the couple: “Me. But Chase is notorious for that, too. I foresee and real dirty dance-off.", category: "Best man")
 
