@@ -1,3 +1,20 @@
+<header id="header">
+  <nav class="links" style="--items: 5;">
+  <ul class="nav">
+      <% if user_signed_in? %>
+      <div class="add">
+        <%= link_to "Add your new wedding", new_wedding_path, class: "t btn-flat" %>
+      </div>
+        <li><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %></li>
+      <% else %>
+        <li>
+        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+    <span class="line"></span>
+  </nav>
+</header>
 <div class="pagez">
   <h1 class="header"> Upcoming Weddings </h1>
   <div class="cards">
@@ -16,8 +33,5 @@
         </div>
       <% end %>
     <% end %>
-  </div>
-  <div class="add">
-      <%= link_to "Add your new wedding", new_wedding_path, class: "t btn-flat" %>
   </div>
 </div>
