@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+require "faker"
+
 WeddingGuest.destroy_all
 RegistryItem.destroy_all
 Registry.destroy_all
@@ -118,3 +120,17 @@ rsvp_3.save!
 rsvp_4 = Rsvp.new(meal_choice: "Vegan", spotify_song: "Hello, Adele", attendance: "Yes", attendee: "Orla James")
 rsvp_4.wedding = wedding_2
 rsvp_4.save!
+
+puts 'Creating 120 fake names'
+
+120.times do 
+  rsvp = Rsvp.create(
+    attendee: Faker::Name.name,
+    attendance: ["Yes", "No"].sample,
+    meal_choice: ["Chicken", "Steak","Gluten free","Vegan"].sample,
+    spotify_song: Faker::Music.band
+  )
+  rsvp.wedding = wedding_2
+  rsvp.save!
+end
+puts 'Finished!'
