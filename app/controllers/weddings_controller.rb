@@ -31,15 +31,15 @@ class WeddingsController < ApplicationController
 
   def update
     @wedding = Wedding.find(params[:id])
-    new_photos =  wedding_params[:photos]
+    new_photos = wedding_params[:photos]
     @wedding.photos.attach(new_photos)
     @wedding.save
     # @wedding.photos.push(wedding_params[:photos])
     redirect_to wedding_path(@wedding)
   end
 
-
   private
+
   def wedding_params
     params.require(:wedding).permit(:info, :date, :page_heading, photos: [] )
   end
