@@ -2,7 +2,6 @@
   background-color: #efe4d8;
 }
 
-
 .main-container {
   display: grid;
   grid-template-columns: 2fr 2fr;
@@ -10,17 +9,47 @@
   position: relative;
 }
 
-
 .accom_cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 16px;
   /* flex-grow: 1; */
   padding: 16px;
   border-radius: 8px;
   background-color: transparent;
+}
 
+.card-title {
+  color: rgb(105, 101, 101);
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  text-align: left;
+}
 
+.card-text {
+  color: rgb(45, 43, 43);
+  font-size: 16px;
+  // opacity: .9;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.699);
+  font-family: 'Noto Sans', sans-serif;
+  max-width: 500px;
+  text-align: left;
+  padding-left: 0px;
+  font-style: italic;
+
+}
+
+.card-address {
+  color: rgb(45, 43, 43);
+  font-size: 16px;
+  // opacity: .9;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.699);
+  font-family: 'Noto Sans', sans-serif;
+  max-width: 500px;
+  text-align: left;
+  padding-left: 0px;
 }
 
 #map {
