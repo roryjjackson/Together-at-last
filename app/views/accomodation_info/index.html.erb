@@ -1,29 +1,27 @@
 
 
 <div class="entire">
-
-  <h1 class="header">Accomodations</h1>
+  <h1 class="header">Accomodation</h1>
   <div class="main-container">
     <div class="accom_cards">
 
       <% @accomodation_info.each do |accomodation_info| %>
-        <div class="row mt-3 ml-5" style="width: 28rem; height: 14rem;">
+        <div class="row mt-5 ml-5" style="width: 28rem; height: 14rem;">
          <div class="card-body">
           <div id="card-title">
             <h1 class="card-title"><%= accomodation_info.title %></h1>
             <p class="card-text"><%= accomodation_info.description %></p>
-            <p class="card-address">📍 <%= accomodation_info.address %></p>
-            <a href="https://www.airbnb.com.au/rooms/26555902?source_impression_id=p3_1662995947_7F%2BjrArOZ%2F65b1ij"  target="_blank" class="btn btn-primary">Book a room</a>
+            <p class="card-address"><%= accomodation_info.address %></p>
+            <a href="https://www.airbnb.com.au/rooms/26555902?source_impression_id=p3_1662995947_7F%2BjrArOZ%2F65b1ij"  target="_blank" class="btn btn-flat">Book a room</a>
           </div>
-         </div>
           <%# <p><%= accomodation_info.url %>
           <%# <%# <h3>Adress</h3> %>
           <%# <%= link_to "View", accomodation_info_path(accomodation_info) %>
          <%# </div> %>
+          </div>
         </div>
       <% end%>
       </div>
-
 
     <div id="map">
       <div class="map" style="height: 100vh; padding-bottom: 40px;"
