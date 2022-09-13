@@ -3,14 +3,14 @@
   <div class="cards">
     <%@weddings.each do |wedding| %>
       <%= link_to wedding_wedding_guests_path(wedding), data: { "turbo-method": :post }, class:"text-decoration-none" do %>
-        <div class="card mt-5">
+        <div class="card mt-5" data-controller="timer">
           <% wedding.photos.each do |photo| %>
             <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
-            <div class= "card-body">
+            <div class= "card-body", >
               <h5 class="card-title"><%= wedding.page_heading %></h5>
               <p class="wedding-card-text"> <%= wedding.info %></p>
-              <p class="wedding-card-text"><%= wedding.date %></p>
-              <%# <a href="#" class="btn btn-primary">select this wedding</a> %>
+              <p class="wedding-card-text", data-timer-target="date" ><%= wedding.date %></p>
+              <p data-timer-target="demo">How many days?</p>
             </div>
           <% end %>
         </div>
