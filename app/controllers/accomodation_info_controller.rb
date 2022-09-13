@@ -1,5 +1,5 @@
 class AccomodationInfoController < ApplicationController
-
+  before_action :set_wedding, only: [ :new, :index, :show ]
   def create
     @accomodation_info = AccomodationInfo.new(accomodation_info_params)
     @wedding = Wedding.find(params[:wedding_id])
@@ -27,6 +27,10 @@ class AccomodationInfoController < ApplicationController
   end
 
   private
+
+  def set_wedding
+    @wedding = Wedding.find(params[:wedding_id])
+  end
 
   def accomodation_info_params
     params.require(:accomodation_info).permit(:url, :title, :description)
