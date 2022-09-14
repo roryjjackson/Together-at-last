@@ -61,8 +61,10 @@ vip_1 = Vip.create!(wedding_id: wedding_1.id, name: "Mustak", description: "Firs
 
 puts"wedding created #{Wedding.count}"
 
-vip_1 = Vip.create!(wedding_id: wedding_2.id, name: "Mustak", description: "First person to hit the reception dance floor after the couple: “Me. But Chase is notorious for that, too. I foresee and real dirty dance-off.", category: "Groomsman")
-
+vip_1 = Vip.new(wedding_id: wedding_2.id, name: "Mustak", description: "First person to hit the reception dance floor after the couple: “Me. But Chase is notorious for that, too. I foresee and real dirty dance-off.", category: "Groomsman")
+pic = URI.open("https://images.pexels.com/photos/845457/pexels-photo-845457.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-845457.jpg&fm=jpg")
+vip_1.photo.attach(io: pic, filename: "nes.png", content_type: "image/png")
+vip_1.save!
 vip_2 = Vip.create!(wedding_id: wedding_2.id, name: "Rory", description: "Must-have survival supply: “A Leatherman. And a flask of Heaven Hill whiskey, for those chilly nights camping you never know when you'll get unexpected company.”", category: "Groomsman")
 vip_3 = Vip.create!(wedding_id: wedding_2.id, name: "Sharon", description: "Best book to bring on vacation: “Tiny Beautiful Things by Cheryl Strayed. It's smart and witty and fun. Since the book is a collection of advice-column letters, you can flip open and read a couple at a time, which is nice for a bus ride or before a nap by the ocean.", category: "Bridesmaid")
 vip_4 = Vip.create!(wedding_id: wedding_2.id, name: "Tony", description: "You're at karaoke, what is your go-to crowd pleaser? “The last time I hit the mic, maybe two years ago, it was my buddy's bachelor party weekend. I did that Les Mis song 'On My Own'. Don't judge. It was after numerous Sake bombs, and, for the record, it brought down the house", category: "Groomsman" )
