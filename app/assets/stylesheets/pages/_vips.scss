@@ -78,6 +78,11 @@ a.list-group-item.list-group-item-action {
   box-shadow: 0 4px 4px 0;
 }
 
+.vip-photo {
+  box-shadow: 0 4px 4px 0;
+  margin: 0 20px 30px 20px;
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -96,9 +101,7 @@ html body {
   background-attachment: fixed;
 }
 
-// .leaf1 {
-//   position: fixed;
-//   top: 30px;
-//   z-index: -1;
-//   height: 300px;
-// }
+input.rsvp_button.btn-flat {
+  background-color:  #efe4d8;
+  color: rgba(115,115,115,115);
+}
