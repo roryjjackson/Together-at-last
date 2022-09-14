@@ -7,7 +7,7 @@
 }
 
 .wedding-card-text {
-    color: black !important;
+  color: rgba(115,115,115,115);
     padding-left: 0px !important;
     font-size: 10px;
     font-weight: bold;
@@ -17,7 +17,7 @@
 }
 
 .card-title {
-  color: black !important;
+  color: rgba(115,115,115,115);
   padding-left: 0px !important;
   font-size: 30px;
   font-weight: bold;
@@ -27,20 +27,19 @@
 }
 
 .wedding-card-date {
-  color: black !important;
   padding-left: 0px !important;
   font-size: 20px;
   font-weight: bold;
   font-family: 'Cinzel', serif;
   z-index: 3;
   text-align: center;
+  color: rgba(115,115,115,115);
 }
 
 div.card {
-  height: 595px;
-  box-shadow: 0 4px 4px 0 black;
+  height: 610px;
+  box-shadow: 0 4px 4px 0 rgba(115,115,115,115);
 }
-
 .card-info {
   padding: 20px;
 }
@@ -53,8 +52,30 @@ div.card {
   margin: 20px 0;
 }
 
+.wedding-card-countdown {
+  color: rgba(115,115,115,115);
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Cinzel', serif;
+}
 
+.new-wedding-link {
+  color: rgba(115,115,115,115);
+  margin-left: 20px;
+  font-family: 'Cinzel', serif;
+  // border: solid black 1px;
+  padding: 3px 5px 3px 5px;
+}
 
+.new-wedding-link:hover {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(134, 134, 134, 0.061);
+}
+
+img.card-image {
+  box-shadow: 0 2px 2px 0 rgba(115,115,115,115);
+}
 
 
 // .header {
