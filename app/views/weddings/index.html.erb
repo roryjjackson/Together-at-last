@@ -1,6 +1,6 @@
 <header id="header">
   <ul class="nav">
-    <li><%= link_to "new wedding", new_wedding_path %></li>
+    <li><%= link_to "new wedding", new_wedding_path, class: "new-wedding-link" %></li>
     <img src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663073606/development/white_logo5_zg3ixw.png">
     <li><%= link_to "log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %></li>
   </ul>
@@ -10,12 +10,12 @@
   <%@weddings.each do |wedding| %>
     <%= link_to wedding_wedding_guests_path(wedding), data: { "turbo-method": :post }, class:"text-decoration-none" do %>
       <div class="card" data-controller="timer">
-        <%= cl_image_tag wedding.photos[0].key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno, class: "card-image" %>
+        <%= cl_image_tag wedding.photos[0].key, height: 280, width: 380, crop: :fill, cloud_name: :dzyug4vno, class: "card-image" %>
         <div class="card-info">
           <h5 class="card-title"><%= wedding.page_heading %></h5>
           <p class="wedding-card-text"> <%= wedding.info %></p>
           <p class="wedding-card-date" data-timer-target="date" ><%= wedding.date %></p>
-          <p data-timer-target="demo">How many days?</p>
+          <p data-timer-target="demo" class="wedding-card-countdown">How many days?</p>
         </div>
       </div>
     <% end %>

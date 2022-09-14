@@ -1,7 +1,6 @@
-<%# <div class="page"> %>
-    <img src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071836/development/DSC02456_mui4wt.jpg" alt="" class="image5" style="filter: brightness(70%);">
-    <img src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071841/development/DSC02516_w906un.jpg" class="image3" style="filter: brightness(70%);">
-    <img src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071844/development/DSC02485_g4xrxf.jpg" class="image2" style="filter: brightness(70%);">
+<img src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071836/development/DSC02456_mui4wt.jpg" alt="" class="image5">
+<img src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071841/development/DSC02516_w906un.jpg" class="image3">
+<img src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071844/development/DSC02485_g4xrxf.jpg" class="image2">
   <div class="data">
     <h1><%= @wedding.page_heading %></h1>
     <h2><%= @wedding.date %></h2>
@@ -16,12 +15,14 @@
           <% @wedding.photos.each do |photo| %>
           <% if i == 0 %>
               <div class="carousel-item active">
-                <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class: "d-block w-100" %>
+                <%# <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class: "d-block w-100" %>
+                <%= cl_image_tag photo.key, class: "d-block w-100" %>
               </div>
               <% i += 1 %>
             <% else %>
               <div class="carousel-item">
-                <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class: "d-block w-100" %>
+                <%# <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class: "d-block w-100" %>
+                <%= cl_image_tag photo.key, class: "d-block w-100" %>
               </div>
             <% end %>
           <% end %>
@@ -38,4 +39,3 @@
     <% end %>
     <%= render 'edit', wedding: @wedding %>
   </div>
-<%# </div> %>

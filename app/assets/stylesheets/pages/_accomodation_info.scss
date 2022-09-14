@@ -1,11 +1,13 @@
-.entire {
-  background-color: #efe4d8;
+.accomodation-title {
+  color: rgb(105, 101, 101);
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  margin: 10px 0;
 }
 
-
-.card-body {
-
-}
 .main-container {
   display: grid;
   grid-template-columns: 2fr 2fr;
@@ -56,12 +58,12 @@
   padding-left: 0px;
 }
 
-#map {
-  // height: 100vh;
+.map {
   position: sticky;
-  top: 0;
-  padding: 20px;
+  top: 10px;
+  margin: 0 20px 0 0;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  height: 75vh;
 }
 
 @media(max-width: 992px) {
