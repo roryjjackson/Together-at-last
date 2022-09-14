@@ -8,7 +8,7 @@
 
 
 require "faker"
-=======
+
 puts "destroying everything!"
 
 
@@ -135,7 +135,7 @@ rsvp_4.save!
 
 puts 'Creating 120 fake names'
 
-120.times do 
+120.times do
   rsvp = Rsvp.create(
     attendee: Faker::Name.name,
     attendance: ["Yes", "No"].sample,
