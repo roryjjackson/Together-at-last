@@ -1,19 +1,5 @@
 <div class="rsvp">
 <h1 class="text-title">RSVP</h1>
-
-<%# <p class="card-content"><% @rsvps.each do |rsvp| %>
-  <%# <%= rsvp.attendee %> 
-  <%# <%= rsvp.attendance %> 
-  <%# <%= rsvp.meal_choice %> 
-  <%# <%= rsvp.spotify_song %> 
-<%# <% end %>
-<%# </p> %>
-
-<%# <div>
-  <img class="rsvpphoto" src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071844/development/DSC02485_g4xrxf.jpg"> %>
-
- 
-
   <div class="table-container">
     <table class="table">
       <tr>
@@ -22,10 +8,8 @@
         <th>meal_choice</th>
         <th>spotify_song</th>
       </tr>
-
       <p>Total guests coming:</p>
       <%= @total_participants %>
-
       <tr>
       <% @rsvps.each do |rsvp| %>
         <td><%=rsvp.attendee%></td>
@@ -35,10 +19,5 @@
       </tr>
       <% end %>
       </table>
-    <%# </div> %>
    </div>
   </div>
-
-
-
-
