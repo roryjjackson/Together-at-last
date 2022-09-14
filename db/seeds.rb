@@ -50,10 +50,10 @@ wedding_3.save!
 puts "user created #{Wedding.count} weddings"
 
 puts "creating 4 accomodations"
-accomodation1 = AccomodationInfo.create(title: "Ritz Paris - Stay with us", description: "The Ritz Paris has reopened in June 2016 after an unprecedented restoration. The legendary hotel opens its doors with 71 luxurious suites, including 16 historic Prestige Suites, and 71 rooms. ", address: "15 Place Vendome, 75001 Paris France", wedding: wedding_1)
-accomodation2 = AccomodationInfo.create(title: "Kimpton St Honore Paris", description: "Moments away from the Opera House, the iconic department stores, the Faubourg St Honoré and the Tuileries Garden, Kimpton St Honoré Paris features 149 beautifully appointed guestrooms and suites.", address: "27-29 boulevard des Capucines, 75002 Paris France", wedding: wedding_1)
-accomodation3 = AccomodationInfo.create(title: "Hyatt Regency Paris", description: "Hyatt Regency Paris Etoile, formerly the renowned Hotel Concorde La Fayette, stands as one of the most impressive properties in the city.", address: "22 rue Danielle Casanova, 75002 Paris France", wedding: wedding_1)
-accomodation4 = AccomodationInfo.create(title: "The Westin Paris", description: "4-star hotel with 24-hour fitness and swimming pool, near the city center.", address: "3, Rue De Castiglione, 75001 Paris France", wedding: wedding_1)
+accomodation1 = AccomodationInfo.create(title: "Ritz Paris - Stay with us", description: "The Ritz Paris has reopened in June 2016 after an unprecedented restoration. The legendary hotel opens its doors with 71 luxurious suites, including 16 historic Prestige Suites, and 71 rooms. ", address: "15 Place Vendome, 75001 Paris France", wedding: wedding_2)
+accomodation2 = AccomodationInfo.create(title: "Kimpton St Honore Paris", description: "Moments away from the Opera House, the iconic department stores, the Faubourg St Honoré and the Tuileries Garden, Kimpton St Honoré Paris features 249 beautifully appointed guestrooms and suites.", address: "27-29 boulevard des Capucines, 75002 Paris France", wedding: wedding_2)
+accomodation3 = AccomodationInfo.create(title: "Hyatt Regency Paris", description: "Hyatt Regency Paris Etoile, formerly the renowned Hotel Concorde La Fayette, stands as one of the most impressive properties in the city.", address: "22 rue Danielle Casanova, 75002 Paris France", wedding: wedding_2)
+accomodation4 = AccomodationInfo.create(title: "The Westin Paris", description: "4-star hotel with 24-hour fitness and swimming pool, near the city center.", address: "3, Rue De Castiglione, 75001 Paris France", wedding: wedding_2)
 
 puts "user created #{AccomodationInfo.count} accomdations"
 
