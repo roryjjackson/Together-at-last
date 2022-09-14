@@ -33,16 +33,24 @@ puts "user created #{User.count} users"
 puts "creating 3 weddings"
 
 wedding_1 = Wedding.new(user_id: user1.id, page_heading: "Mustak and Sharon", info: "Mustak and Sharon met while both out with their groups of friends at a bar in Phoenix. After catching each other’s eye across the room and spending the  rest of the night finding out how much they have in common, they started dating. Two years later, we're best friends, true loves, and badass partners in life. We're finally ready to make it official!.", date:"2023-05-16")
-file = URI.open("https://res.cloudinary.com/dzyug4vno/image/upload/v1663071844/development/DSC02485_g4xrxf.jpg")
+file = URI.open("https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-1024993.jpg&fm=jpg")
 wedding_1.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 wedding_1.save!
 
-wedding_2 = Wedding.new(user_id: user2.id, page_heading: "Rory and James", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date:"2022-09-16")
-file = URI.open("https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-1024993.jpg&fm=jpg")
+wedding_2 = Wedding.new(user_id: user2.id, page_heading: "Zoe and Cameron", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date:"2022-09-16")
+file= URI.open("https://res.cloudinary.com/dzyug4vno/image/upload/v1663071844/development/DSC02485_g4xrxf.jpg")
+file1 = URI.open("https://images.pexels.com/photos/948185/pexels-photo-948185.jpeg?cs=srgb&dl=pexels-rocsana-nicoleta-gurza-948185.jpg&fm=jpg")
+file2 = URI.open("https://images.pexels.com/photos/1486101/pexels-photo-1486101.jpeg?cs=srgb&dl=pexels-dimitri-kuliuk-1486101.jpg&fm=jpg")
+file3 = URI.open("https://images.pexels.com/photos/7119194/pexels-photo-7119194.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-7119194.jpg&fm=jpg")
+
 wedding_2.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
+wedding_2.photos.attach(io: file1, filename: "nes.png", content_type: "image/png")
+wedding_2.photos.attach(io: file2, filename: "nes.png", content_type: "image/png")
+wedding_2.photos.attach(io: file3, filename: "nes.png", content_type: "image/png")
+
 wedding_2.save!
 
-wedding_3 = Wedding.new(user_id: user3.id, page_heading: "Mr and Mrs Jackson", info: "He thought she was cute. She thought he was ignoring her. She thought he was rude. He forgot her name. He asked her out. She arrived 10 minutes late. They trained together then made it official. He proposed. She said yes.Yet it wasn't until a group outing where they were left alone on the dance floor, grooving to funky soul beats, when they knew they were meant to be together.", date:"2023-12-29")
+wedding_3 = Wedding.new(user_id: user3.id, page_heading: "Michelle and Barry", info: "He thought she was cute. She thought he was ignoring her. She thought he was rude. He forgot her name. He asked her out. She arrived 10 minutes late. They trained together then made it official. He proposed. She said yes.Yet it wasn't until a group outing where they were left alone on the dance floor, grooving to funky soul beats, when they knew they were meant to be together.", date:"2023-12-29")
 file = URI.open("https://images.pexels.com/photos/1573007/pexels-photo-1573007.jpeg?cs=srgb&dl=pexels-taras-budniak-1573007.jpg&fm=jpg")
 wedding_3.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 wedding_3.save!
