@@ -1,104 +1,71 @@
-.card-trip img {
-    width: 350px;
-    height: 350px;
-}
-
-.text {
-  width: 400px;
-  // border: solid black 3px;
-  // margin-left: 530px;
-  // margin-top: -800px;
-}
-.schedule-page {
-  margin: auto;
-  width: 82%;
+.schedule-header {
   display: flex;
-  justify-content: space-between;
-  // margin-bottom: 150px;
-}
-.picture {
-  // margin-left: -180px;
+  justify-content: left;
+  align-items: center;
 }
 
-.btnx {
-  background-color: #D6CCC2;
-  border: none;
-  color: white;
-  position: relative;
-  justify-content: right;
+.add-new-schedule {
+  display: flex;
+  color: rgba(115,115,115,115);
+  font-size: 18px;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 70px;
+  margin: 0 100px;
+  border: solid ;
+  position: sticky;
+  top: 50px;
 }
 
-.btnx:hover {
-  background-color: #D6CCC2;
-  border: solid white 3px;
+.add-new-schedule:hover {
   text-decoration: none;
-  color: white;
-}
-
-.btn {
-  display: flex;
-  justify-content: right;
-  background-color: #D6CCC2;
-  border: none;
   color: black;
-  position: relative;
-  // padding: 600px;
-  z-index: 4;
-  height: 40px;
-  margin-right: 0;
+  background-color: rgba(134, 134, 134, 0.061);
 }
 
-.btn:hover {
-  background-color: #D6CCC2;
-  border: solid white 3px;
-  // color: white;
+.schedule-title {
+  color: rgba(115,115,115,115);
+  font-size: 80px;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  // align-items: ;
+  // margin-top: 50px;
 }
 
-.picture {
-  position: fixed;
-  z-index: 1;
-  margin-top: 150px;
-}
-
-.dropdown-menu {
-  position: absolute;
-  z-index: 2;
+.schedule-data {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .text {
-  position: relative;
-  z-index: 2;
-  // border: solid black 3px;
+  // position: relative;
+  // z-index: 2;
   color: white;
-}
-
-.q {
-  background-color: #D6CCC2;
-  font-family: ‘Cinzel’, serif;
-  height: 100vh;
-}
-
-.q h1 {
-  position: fixed;
-  z-index: 3;
-  padding-left: 200px;
-  color: white;
-  font-size: 80px;
-
+  width: 400px;
 }
 
 .text-right {
   border-bottom: solid white 2px;
-  // border-top: solid white 2px;
 }
 
-.image1 {
-  height: 500px;
+.schedule-img-1 {
+  height: 400px;
+  box-shadow: 0 4px 4px 0;
   object-fit: cover;
-  position: fixed;
-  z-index: 0;
-  padding-top: 200px;
-  padding-left: 300px;
-  top: 375px;
-  left: 275px;
+  position: sticky;
+  top: 300px;
+}
+
+.schedule-img-2 {
+  height: 500px;
+  box-shadow: 0 4px 4px 0;
+  object-fit: cover;
+  position: sticky;
+  top: 135px;
 }

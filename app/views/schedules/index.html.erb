@@ -1,34 +1,25 @@
-<div class="q">
-  <img src="https://images.pexels.com/photos/1024968/pexels-photo-1024968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="image1">
-    <%= link_to "Add an event to your schedule", new_wedding_schedule_path, class: "btnx" %>
-    <h1 class="text-center mt-5 mb-5">Order of the day</h1>
-    <div class="schedule-page">
-      <div class="buttonx">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
-        <ul class="dropdown-menu dropdown-menu-dark">
-          <li><a class="dropdown-item" href="/weddings">Exit</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><%= link_to "Home", wedding_path(@wedding), class: "dropdown-item" %></li>
-        </ul>
-      </div>
-      <div class="picture">
-        <img class="circle" style="width: 700px;" src="https://bridebox.com/wp-content/uploads/2015/04/marital-problems.jpg" />
-      </div>
-      <div class="text">
-        <% i = 1 %>
-        <% @schedules.each do |schedule| %>
-          <% if i.odd?  %>
-            <div class="text-right">
-              <h3><%= schedule.time.strftime("%I:%M%p") %></h3>
-              <p><%= schedule.description %></p>
-            </div>
-          <% else %>
-            <div class="text-left">
-              <h3><%= schedule.time.strftime("%I:%M%p") %></h3>
-              <p><%= schedule.description %></p>
-            </div>
-          <% end %>
-        <% i += 1 %>
+<div class="schedule-header">
+  <%= link_to "Add an event", new_wedding_schedule_path, class: "add-new-schedule" %>
+  <h1 class="schedule-title">Order of the day</h1>
+</div>
+<div class="schedule-data">
+    <img class="schedule-img-1" src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071844/development/DSC02485_g4xrxf.jpg" />
+  <div class="text col-4">
+    <% i = 1 %>
+    <% @schedules.each do |schedule| %>
+      <% if i.odd?  %>
+        <div class="text-right">
+          <h3><%= schedule.time.strftime("%I:%M%p") %></h3>
+          <p><%= schedule.description %></p>
+        </div>
+      <% else %>
+        <div class="text-left">
+          <h3><%= schedule.time.strftime("%I:%M%p") %></h3>
+          <p><%= schedule.description %></p>
+        </div>
       <% end %>
-    </div>
+      <% i += 1 %>
+    <% end %>
+  </div>
+  <img class="schedule-img-2" src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071839/development/DSC02503_ei3zum.jpg" />
 </div>
