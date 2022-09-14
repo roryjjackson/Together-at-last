@@ -1,0 +1,38 @@
+.formheader {
+  color: rgb(116, 112, 112);
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 38px;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+}
+
+label.form-label.text {
+  position: relative;
+  z-index: 2;
+  color: rgb(79, 76, 76);
+}
+
+label.form-label.date {
+  position: relative;
+  z-index: 2;
+  color: rgb(79, 76, 76);
+}
+
+
+label.form-label.string {
+  position: relative;
+  z-index: 2;
+  color: rgb(79, 76, 76);
+}
+
+
+label.form-label.file {
+  position: relative;
+  z-index: 2;
+  color: rgb(79, 76, 76);
+}
+
+input.btn.btn-flat {
+  width: 400px;
+}
