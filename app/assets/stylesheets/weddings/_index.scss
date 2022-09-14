@@ -1,11 +1,16 @@
+.entire {
+  background-color: #efe4d8;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   // border-radius: 8px;
   // margin: 30px;
-  background-color: rgba(180,180,180,180);
+
   margin-left: 30px;
+  padding-left: 30px;
 }
 
 .wedding-card-text {
@@ -69,11 +74,3 @@
 //     column-count: 3;
 //   }
 // }
-
-.pagez {
-  background-color: rgba(180,180,180,180);
-  // position: fixed;
-  // z-index: 0;
-  width: auto;
-  height: 100vh;
-}
