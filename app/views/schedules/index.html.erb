@@ -1,9 +1,9 @@
-<%= link_to "Add an event to your schedule", new_wedding_schedule_path, class: "btnx" %>
-<h1 class="schedule-title">Order of the day</h1>
+<div class="schedule-header">
+  <%= link_to "Add an event", new_wedding_schedule_path, class: "add-new-schedule" %>
+  <h1 class="schedule-title">Order of the day</h1>
+</div>
 <div class="schedule-data">
-  <div>
-    <img class="circle" src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071844/development/DSC02485_g4xrxf.jpg" />
-  </div>
+    <img class="schedule-img-1" src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071844/development/DSC02485_g4xrxf.jpg" />
   <div class="text col-4">
     <% i = 1 %>
     <% @schedules.each do |schedule| %>
@@ -21,4 +21,5 @@
       <% i += 1 %>
     <% end %>
   </div>
+  <img class="schedule-img-2" src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071839/development/DSC02503_ei3zum.jpg" />
 </div>
