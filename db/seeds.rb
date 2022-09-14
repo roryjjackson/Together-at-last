@@ -32,18 +32,18 @@ puts "user created #{User.count} users"
 
 puts "creating 3 weddings"
 
-wedding_1 = Wedding.new(user_id: user1.id, page_heading: "Mustak and Sharon", info: "Mustak and Sharon met while both out with their groups of friends at a bar in Phoenix. After catching each other’s eye across the room and spending the  rest of the night finding out how much they have in common, they started dating. Two years later, we're best friends, true loves, and badass partners in life. We're finally ready to make it official!.", date:"2024-07-05")
-file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80")
+wedding_1 = Wedding.new(user_id: user1.id, page_heading: "Mustak and Sharon", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
+file = URI.open("https://res.cloudinary.com/dzyug4vno/image/upload/v1663071844/development/DSC02485_g4xrxf.jpg")
 wedding_1.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 wedding_1.save!
 
-wedding_2 = Wedding.new(user_id: user2.id, page_heading: "Rory and James", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date:"2022-09-16")
-file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80")
+wedding_2 = Wedding.new(user_id: user2.id, page_heading: "Rory and James", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
+file = URI.open("https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-1024993.jpg&fm=jpg")
 wedding_2.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 wedding_2.save!
 
-wedding_3 = Wedding.new(user_id: user3.id, page_heading: "Mr and Mrs Jackson", info: "He thought she was cute. She thought he was ignoring her. She thought he was rude. He forgot her name. He asked her out. She arrived 10 minutes late. They trained together then made it official. He proposed. She said yes.Yet it wasn’t until a group outing where they were left alone on the dance floor, grooving to funky soul beats, when they knew they were meant to be together.", date:"2025-12-15")
-file = URI.open("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80")
+wedding_3 = Wedding.new(user_id: user3.id, page_heading: "Mr and Mrs Jackson", info: "If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy's in hand, setting sail for 80 degree weather. Since our parents have been patiently waiting for a ceremony though, we decided June nuptials in the city would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped all we need are your lovely faces.", date: Date.today.strftime("%FT%T"))
+file = URI.open("https://images.pexels.com/photos/1573007/pexels-photo-1573007.jpeg?cs=srgb&dl=pexels-taras-budniak-1573007.jpg&fm=jpg")
 wedding_3.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 wedding_3.save!
 
@@ -109,6 +109,7 @@ vip_12 = Vip.new(wedding_id: wedding_2.id, name: "Charlie and Janet", descriptio
 file = URI.open("https://images.pexels.com/photos/3831156/pexels-photo-3831156.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-3831156.jpg&fm=jpg")
 vip_12.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 vip_12.save!
+
 puts"vip created #{Vip.count}"
 
 # schedule_1 = Schedule.create!(wedding_id: wedding_1.id, time: "9am", description: "Although the courthouse will have our signatures on the dotted line, we know it won't be real in our eyes until you help us make the commitment. After some lip-locking, a Pablo Neruda poem and the string-quartet version of our all-time favorite jam (shhh it's a secret), we think the deal will be sealed.")
@@ -169,7 +170,7 @@ rsvp_4.save!
 
 puts 'Creating 120 fake names'
 
-120.times do 
+120.times do
   rsvp = Rsvp.create(
     attendee: Faker::Name.name,
     attendance: ["Yes", "No"].sample,

@@ -3,86 +3,66 @@
   justify-content: right;
 }
 
-.page {
-  // background-color: #D6CCC2;
-  height: 100vh;
-  width: auto;
-  z-index: -1;
-  // background-image: url(https://res.cloudinary.com/dzyug4vno/image/upload/v1663071836/development/DSC02456_mui4wt.jpg);
-  // object-fit: cover;
-  // background-color: #EFE4D8;
-  // filter: brightness(60%);
-}
-
 .data h1 {
   // color: rgba(115,115,115,115);
-  color: #1d2720;
-  font-size: 120px;
-  font-family: ‘Cinzel’, serif;
-  // border: solid white 3px;
+  color: white;
+  font-size: 110px;
+  font-family: 'Cinzel', serif;
+  border: solid white 3px;
   width: 100vw;
   text-align: center;
   z-index: 4;
   position: relative;
-  padding-top: 140px;
-  margin-left: 30px;
-  // text-shadow: 0 2px 2px 2px white;
-  // background-color: rgba(255, 255, 255, 0.255);
-  // background-color: #fffdfd3f;
-  // display: inline;
-  // padding: .25em 0;
-  // background: white;
-  // color: #ffffff;
-  // box-shadow: .5em 0 0 #FFC107, -.5em 0 0 #FFC107;
-
+  margin-top: 50px;
+  margin-left: 150px;
+  width: 1000px;
+  background-color: rgba(45, 45, 45, 0.58);
 }
 
 
 .data h2 {
-  color: rgba(115,115,115,115);
-  font-size: 40px;
-  font-family: ‘Cinzel’, serif;
+  color: white;
+  font-size: 50px;
+  font-family: 'Cinzel', serif;
   text-align: center;
   z-index: 4;
   position: relative;
-  padding-right: 400px;
-  // background-color: #fffdfd3f;
+  margin-left: 700px;
+  margin-top: 150px;
+  background-color: rgba(45, 45, 45, 0.58);
+  border: solid white 3px;
+  width: 400px;
 }
 
 #gallery {
   color: rgba(115,115,115,115);
-  font-size: 40px;
-  font-family: ‘Cinzel’, serif;
+  font-size: 50px;
+  font-family: 'Cinzel', serif;
   text-align: center;
   z-index: 4;
   position: relative;
-  margin-right: 200px;
-  margin-top: 150px;
+  // margin-right: 200px;
+  margin-top: 60px;
 }
 
 .data p {
   color: rgba(115,115,115,115);
-  font-size: 18px;
-  font-family: ‘Cinzel’, serif;
+  font-size: 22px;
+  font-family: 'Cinzel', serif;
   margin-top: 280px;
   margin-left: 100px;
   z-index: 4;
   position: relative;
   max-width: 700px;
+  text-align: center;
 }
 
-// .data {
-//   position: relative;
-//   // border: 3px solid #73AD21;
-
-// }
-
 .image5 {
-  height: 510px;
+  height: 540px;
   object-fit: cover;
   position: absolute;
   z-index: 2;
-  margin-top: 40px;
+  margin-top: 80px;
   margin-left: 40px;
   box-shadow: 0 4px 4px 0;
 }
@@ -126,21 +106,42 @@
 .media-share {
   // border: solid black 2px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 0 190px;
-  height: 700px;
+  // margin: 0 190px;
+  height: 650px;
 }
 
 .add-media {
-  // background-color: black;
-  color: rgb(0, 0, 0);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 30px;
-  font-weight: bold;
+  color: rgba(115,115,115,115);  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 24px;
   font-family: 'Cinzel', serif;
   padding: 20px;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  width: 600px;
+  text-shadow: none;
+}
+
+.add-media p {
+  color: rgba(115,115,115,115);
+  font-size: 20px;
+  font-family: 'Cinzel', serif;
+  text-shadow: none;
+}
+
+img.d-block.w-100 {
+  object-fit: cover;
+  box-shadow: 0 4px 4px 0;
+  height: 460px;
+  // width: 700px;
+}
+
+input {
+  background-color: #efe4d8;
+  border: solid rgba(115,115,115,115) 1px;
+  color: rgba(115,115,115,115);
+}
+
+input#wedding_photos.form-control.is-valid.file.optional {
+  background-color: #efe4d8;
 }
