@@ -14,10 +14,10 @@
       <h4 id="list-item-title-1">Groomsmen</h4>
         <p><% @groomsmen.each do |vip| %>
           <div class="vip-card">
-            <h3><%= vip.name %></h3>
+            <h3><%= vip.name %> - <%= vip.category %></h3>
             <p><%= vip.description %></p>
             <% if vip.photo.key.present? %>
-              <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+              <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno, class: "vip-photo" %>
             <% end %>
             <%= (link_to "Delete this person  - ", wedding_vips_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
             <%= (link_to "Edit this person", edit_wedding_path(vip)) if current_user.host? %>
@@ -26,11 +26,10 @@
       <h4 id="list-item-title-2">Bridesmaids</h4>
         <p><% @bridesmaids.each do |vip| %>
           <div class="vip-card">
-            <h3><%= vip.name %></h3>
+            <h3><%= vip.name %> - <%= vip.category %></h3>
             <p><%= vip.description %></p>
-            <p><%= vip.category %></p>
             <% if vip.photo.key.present? %>
-              <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+              <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno, class: "vip-photo" %>
             <% end %>
             <%= (link_to "Delete this person  - ", wedding_vips_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
             <%= (link_to "Edit this person", edit_wedding_path(vip)) if current_user.host? %>
@@ -39,11 +38,10 @@
       <h4 id="list-item-title-3">Parents of the Bride</h4>
         <p><% @pbride.each do |vip| %>
           <div class="vip-card">
-            <h3><%= vip.name %></h3>
+            <h3><%= vip.name %> - <%= vip.category %></h3>
             <p><%= vip.description %></p>
-            <%= vip.category %></p>
             <% if vip.photo.key.present? %>
-              <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+              <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno, class: "vip-photo" %>
             <% end %>
             <%= (link_to "Delete this person  - ", wedding_vips_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
             <%= (link_to "Edit this person", edit_wedding_path(vip)) if current_user.host? %>
@@ -52,11 +50,10 @@
       <h4 id="list-item-title-4">Parents of the Groom</h4>
         <p><% @pgroom.each do |vip| %>
           <div class="vip-card">
-            <h3><%= vip.name %></h3>
+            <h3><%= vip.name %> - <%= vip.category %></h3>
             <p><%= vip.description %></p>
-            <%= vip.category %></p>
             <% if vip.photo.key.present? %>
-              <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno %>
+              <%= cl_image_tag vip.photo.key, height: 300, width: 400, crop: :fill, cloud_name: :dzyug4vno, class: "vip-photo" %>
             <% end %>
             <%= (link_to "Delete this person  - ", wedding_vips_path(vip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) if current_user.host? %>
             <%= (link_to "Edit this person", edit_wedding_path(vip)) if current_user.host? %>
@@ -67,4 +64,3 @@
   <div class="col-6">
     <img src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663071841/development/DSC02516_w906un.jpg" class="image7">
   </div>
-  <%# <img src="https://res.cloudinary.com/dzyug4vno/image/upload/v1663153529/development/Untitled_design_mqb7hq.png" class="leaf1"> %>

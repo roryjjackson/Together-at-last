@@ -13,9 +13,9 @@
     <%= simple_form_for([@wedding,@rsvp]) do |f| %>
       <div class="rsvpinput col-12 mb-3 lg-6">
         <%= f.input :meal_choice, collection: ["Chicken", "Beef", "Vegetarian"] %>
-        <%= f.input :spotify_song %>
-        <%= f.input :attendance, :collection => %w[Yes No] %>
-        <%= f.input :attendee,  collection: ["Myself", "With my partner"]%>
+        <%= f.input :spotify_song, :label => "Name a song that we can add to our playlist!" %>
+        <%= f.input :attendance, :label => "Can you make it to our wedding?", :collection => %w[Yes No] %>
+        <%= f.input :attendee, :label => "Write your name" %>
         <%= f.submit "Complete the form", class: "rsvp_button btn-flat" %>
       </div>
     <% end %>
