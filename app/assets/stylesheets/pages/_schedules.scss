@@ -1,104 +1,30 @@
-.card-trip img {
-    width: 350px;
-    height: 350px;
-}
-
-.text {
-  width: 400px;
-  // border: solid black 3px;
-  // margin-left: 530px;
-  // margin-top: -800px;
-}
-.schedule-page {
-  margin: auto;
-  width: 82%;
-  display: flex;
-  justify-content: space-between;
-  // margin-bottom: 150px;
-}
-.picture {
-  // margin-left: -180px;
-}
-
-.btnx {
-  background-color: #D6CCC2;
-  border: none;
-  color: white;
-  position: relative;
-  justify-content: right;
-}
-
-.btnx:hover {
-  background-color: #D6CCC2;
-  border: solid white 3px;
-  text-decoration: none;
-  color: white;
-}
-
-.btn {
-  display: flex;
-  justify-content: right;
-  background-color: #D6CCC2;
-  border: none;
-  color: black;
-  position: relative;
-  // padding: 600px;
-  z-index: 4;
-  height: 40px;
-  margin-right: 0;
-}
-
-.btn:hover {
-  background-color: #D6CCC2;
-  border: solid white 3px;
-  // color: white;
-}
-
-.picture {
-  position: fixed;
-  z-index: 1;
-  margin-top: 150px;
-}
-
-.dropdown-menu {
-  position: absolute;
-  z-index: 2;
-}
-
-.text {
-  position: relative;
-  z-index: 2;
-  // border: solid black 3px;
-  color: white;
-}
-
-.q {
-  background-color: #D6CCC2;
-  font-family: ‘Cinzel’, serif;
-  height: 100vh;
-}
-
-.q h1 {
-  position: fixed;
-  z-index: 3;
-  padding-left: 200px;
-  color: white;
+.schedule-title {
+  color: rgba(115,115,115,115);
   font-size: 80px;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  margin-top: 50px;
+}
 
+.schedule-data {
+display: flex;
+justify-content: space-evenly;
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  width: 400px;
 }
 
 .text-right {
   border-bottom: solid white 2px;
-  // border-top: solid white 2px;
 }
 
-.image1 {
-  height: 500px;
+.circle {
+  height: 400px;
+  box-shadow: 0 4px 4px 0;
   object-fit: cover;
-  position: fixed;
-  z-index: 0;
-  padding-top: 200px;
-  padding-left: 300px;
-  top: 375px;
-  left: 275px;
+  position: absolute;
 }
