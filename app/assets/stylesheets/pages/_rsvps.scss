@@ -13,6 +13,7 @@
   text-align: center;
   margin: 20px;
 }
+
 .rsvp-form-container {
   display: flex;
   justify-content: space-evenly;
@@ -35,7 +36,7 @@ label.form-label.text.optional {
 
 .rsvp-table-headers {
   position: sticky;
-  top: 109px;
+  top: 0;
   background-color: rgba(59, 59, 59, 0.436);
 }
 
