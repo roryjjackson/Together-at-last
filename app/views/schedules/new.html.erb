@@ -1,5 +1,19 @@
-<%= simple_form_for([@wedding, @schedule]) do |f| %>
-<%= f.input :time %>
-<%= f.input :description %>
-<%= f.submit "add event", class: "btn btn-primary" %>
-<% end %>
+<div class="row d-flex justify-content-center align-items-center h-100">
+<br></br>
+
+  <div class="card_signup mx-12 mx-lg-12 shadow-5-strong" style="
+          margin-top: 30px;
+          background: hsla(0, 0%, 100%, 0.5);
+          backdrop-filter: blur(30px);
+          ">
+
+    <h1 class="formheader">Add a new event</h1>
+
+    <%= simple_form_for([@wedding, @schedule]) do |f| %>
+    <%= f.input :time %>
+    <%= f.input :description %>
+    <%= f.submit "add event", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+</div>
