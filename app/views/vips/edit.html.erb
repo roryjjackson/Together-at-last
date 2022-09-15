@@ -1,7 +1,21 @@
-<%= simple_form_for([@wedding, @vip]) do |f| %>
-<%= f.input :name %>
-<%= f.input :description %>
-<%= f.input :category %>
-<%= f.input :photo, as: :file %>
-<%= f.submit "update vip", class: "btn btn-primary" %>
-<% end %>
+<div class="row d-flex justify-content-center align-items-center h-100">
+  <br></br>
+
+  <div class="card_signup mx-12 mx-lg-12 shadow-5-strong" style="
+        margin-top: 30px;
+        background: hsla(0, 0%, 100%, 0.5);
+        backdrop-filter: blur(30px);
+        ">
+
+      <h1 class="formheader">Edit VIP info.</h1>
+
+      <%= simple_form_for([@wedding, @vip]) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :category %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit "Update VIP", class: "btn btn-flat" %>
+      <% end %>
+
+  </div>
+</div>

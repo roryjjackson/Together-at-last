@@ -26,11 +26,12 @@
 }
 
 .card-title {
-  color: rgb(105, 101, 101);
-  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 25px;
+  color: #737373;
+  padding-left: 0px !important;
+  font-size: 30px;
   font-weight: bold;
   font-family: 'Cinzel', serif;
+  z-index: 3;
   text-align: left;
 }
 
