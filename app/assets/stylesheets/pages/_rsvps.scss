@@ -11,6 +11,7 @@
   font-weight: bold;
   font-family: 'Cinzel', serif;
   text-align: center;
+  margin: 20px;
 }
 .rsvp-form-container {
   display: flex;
@@ -30,4 +31,15 @@ label.form-label.text.optional {
   height: 380px;
   object-fit: cover;
   box-shadow: 0 4px 4px 0;
+}
+
+.rsvp-table-headers {
+  position: sticky;
+  top: 109px;
+  background-color: rgba(59, 59, 59, 0.436);
+}
+
+.total-counter {
+  margin: 0 0 20px 0;
+  text-align: center;
 }

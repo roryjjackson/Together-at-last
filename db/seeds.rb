@@ -32,7 +32,7 @@ puts "user created #{User.count} users"
 
 puts "creating 3 weddings"
 
-wedding_1 = Wedding.new(user_id: user1.id, page_heading: "Mustak and Sharon", info: "Mustak and Sharon met while both out with their groups of friends at a bar in Phoenix. After catching each other’s eye across the room and spending the  rest of the night finding out how much they have in common, they started dating. Two years later, we're best friends, true loves, and badass partners in life. We're finally ready to make it official!.", date:"2023-05-16")
+wedding_1 = Wedding.new(user_id: user1.id, page_heading: "Mustak and Sharon", info: "Mustak and Sharon met while both out with their groups of friends at a bar in Phoenix. After catching each other’s eye across the room and spending the  rest of the night finding out how much they have in common, they started dating. Things started to get exciting for the pair and two years later, we're best friends, true loves, and badass partners in life. We're finally ready to make it official!.", date:"2023-05-16")
 file = URI.open("https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-1024993.jpg&fm=jpg")
 wedding_1.photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 wedding_1.save!
