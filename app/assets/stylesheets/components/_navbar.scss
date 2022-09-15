@@ -27,6 +27,11 @@ a.dropdown-item {
   color: rgba(115,115,115,115);
 }
 
+a.dropdown-item:active {
+  background-color: #efe4d8;
+  color: rgba(115,115,115,115)
+}
+
 .nav img {
   height: 65px;
   // margin-left: px;

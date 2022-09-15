@@ -10,10 +10,10 @@ export default class extends Controller {
       var now = new Date().getTime();
       var distance = countDownDate - now;
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      demo.innerHTML = days + " Days to go 🎉🎉🎉";
+      demo.innerHTML = days + " Days to go ⏳";
       if (distance < 0) {
         clearInterval(x);
-       demo.innerHTML = "Its the BIG DAY! 🥳👰🏼‍♀️🤵🏽‍♂️";
+       demo.innerHTML = "Its the BIG DAY! 💍 ";
       }
      }, 2000 );
   }
