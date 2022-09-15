@@ -1,15 +1,17 @@
 <div class="rsvp">
 <h1 class="text-title">RSVP</h1>
+      <div class="total-counter">
+        <p>Total guests attending:</p>
+        <%= @total_participants %>
+      </div>
   <div class="table-container">
     <table class="table">
-      <tr>
-        <th>name</th>
-        <th>attendance</th>
-        <th>meal choice</th>
-        <th>spotify song</th>
+      <tr class="rsvp-table-headers">
+        <th>NAME</th>
+        <th>COMING?</th>
+        <th>MEAL CHOICE</th>
+        <th>SONG CHOICE</th>
       </tr>
-      <p>Total guests coming:</p>
-      <%= @total_participants %>
       <tr>
       <% @rsvps.each do |rsvp| %>
         <td><%=rsvp.attendee%></td>
