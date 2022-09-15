@@ -58,7 +58,7 @@ wedding_3.save!
 puts "user created #{Wedding.count} weddings"
 
 puts "creating 4 accomodations"
-accomodation1 = AccomodationInfo.create(title: "Ritz Paris - Stay with us", description: "The Ritz Paris has reopened in June 2016 after an unprecedented restoration. The legendary hotel opens its doors with 71 luxurious suites, including 16 historic Prestige Suites, and 71 rooms. ", address: "15 Place Vendome, 75001 Paris France", wedding: wedding_2)
+accomodation1 = AccomodationInfo.create(title: "Ritz Paris", description: "The Ritz Paris has reopened in June 2016 after an unprecedented restoration. The legendary hotel opens its doors with 71 luxurious suites, including 16 historic Prestige Suites, and 71 rooms. ", address: "15 Place Vendome, 75001 Paris France", wedding: wedding_2)
 accomodation2 = AccomodationInfo.create(title: "Kimpton St Honore Paris", description: "Moments away from the Opera House, the iconic department stores, the Faubourg St Honoré and the Tuileries Garden, Kimpton St Honoré Paris features 249 beautifully appointed guestrooms and suites.", address: "27-29 boulevard des Capucines, 75002 Paris France", wedding: wedding_2)
 accomodation3 = AccomodationInfo.create(title: "Hyatt Regency Paris", description: "Hyatt Regency Paris Etoile, formerly the renowned Hotel Concorde La Fayette, stands as one of the most impressive properties in the city.", address: "22 rue Danielle Casanova, 75002 Paris France", wedding: wedding_2)
 accomodation4 = AccomodationInfo.create(title: "The Westin Paris", description: "4-star hotel with 24-hour fitness and swimming pool, near the city center.", address: "3, Rue De Castiglione, 75001 Paris France", wedding: wedding_2)
@@ -105,7 +105,7 @@ vip_9 = Vip.new(wedding_id: wedding_2.id, name: "Emma", description: "You're at 
 file = URI.open("https://images.pexels.com/photos/354951/pexels-photo-354951.jpeg?cs=srgb&dl=pexels-pixabay-354951.jpg&fm=jpg")
 vip_9.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 vip_9.save!
-vip_10 = Vip.new(wedding_id: wedding_2.id, name: "Sally", description: "Need an insider's guide to Montauk? Next to our Place page. He's been coming here for decades (or is it centuries?). When it comes to shucking oysters, shelling lobsters, or just cracking jokes he's your go-to guy.", category: "Groomsman" )
+vip_10 = Vip.new(wedding_id: wedding_2.id, name: "Sally", description: "Need an insider's guide to Montauk? Next to our Place page. He's been coming here for decades (or is it centuries?). When it comes to shucking oysters, shelling lobsters, or just cracking jokes he's your go-to guy.", category: "Bridesmaid" )
 file = URI.open("https://images.pexels.com/photos/450214/pexels-photo-450214.jpeg?cs=srgb&dl=pexels-royal-anwar-450214.jpg&fm=jpg")
 vip_10.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 vip_10.save!
