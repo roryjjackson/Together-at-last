@@ -12,8 +12,16 @@
         <th>MEAL CHOICE</th>
         <th>SONG CHOICE</th>
       </tr>
+      <% @rsvp_yes.each do |rsvp| %>
       <tr>
-      <% @rsvps.each do |rsvp| %>
+        <td><%=rsvp.attendee%></td>
+        <td><%=rsvp.attendance%></td>
+        <td><%=rsvp.meal_choice unless rsvp.attendance == "No"%></td>
+        <td><%=rsvp.spotify_song unless rsvp.attendance == "No"%></td>
+      </tr>
+      <% end %>
+      <% @rsvp_no.each do |rsvp| %>
+      <tr>
         <td><%=rsvp.attendee%></td>
         <td><%=rsvp.attendance%></td>
         <td><%=rsvp.meal_choice unless rsvp.attendance == "No"%></td>

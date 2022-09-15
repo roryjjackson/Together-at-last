@@ -24,15 +24,18 @@ class VipsController < ApplicationController
   end
 
   def edit
-    # @wedding = Wedding.find(params[:wedding_id])
+    @wedding = Wedding.find(params[:wedding_id])
     @vip = Vip.find(params[:id])
+    # raise
   end
 
   def update
+    # raise
+    @wedding = Wedding.find(params[:wedding_id])
     @vip = Vip.find(params[:id])
     @vip.update(vip_params)
     # raise
-    redirect_to wedding_vips_path(:wedding_id)
+    redirect_to wedding_vips_path(@wedding)
   end
 
   def destroy
@@ -40,7 +43,7 @@ class VipsController < ApplicationController
     # @wedding = Wedding.find(params[:wedding_id])
     @vip = Vip.find(params[:id])
     @vip.destroy
-    redirect_to wedding_vips_path(:wedding_id)
+    redirect_to wedding_vips_path(@vip.wedding_id)
     # raise
   end
 
